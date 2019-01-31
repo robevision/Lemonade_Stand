@@ -12,15 +12,21 @@ namespace LemonadeStand
         private int winner;
         TimeFrame timeFrame;
         Player player;
+        MarketPlace marketPlace;
 
         public Game()
         {
             timeFrame = new TimeFrame();
             player = new Player();
+            marketPlace = new MarketPlace();
         }
         public void CheckGameResult()
         {
-         
+        
+         if (timeFrame.DisplayWeek() >= 1 && timeFrame.DisplayDay() == 0)
+            {
+                //if (Player.Wallet.DisplayMoney() == +int);
+            }
         }
         public Player Player
         {

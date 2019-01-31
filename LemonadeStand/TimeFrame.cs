@@ -39,10 +39,14 @@ namespace LemonadeStand
                 amountOfMonths = 0;
             if (amountOfYears == 10)
                 {
-                    Console.WriteLine("You are really committed to this game! Congratulations on your 10 year old lemonade stand business!");
+                    Console.WriteLine($"You are really committed to this game! Congratulations on your {amountOfYears} year old lemonade stand business!");
                     System.Threading.Thread.Sleep(2000);
                 }
             }
+        }
+        public int DisplayWeek()
+        {
+            return amountOfWeeks;
         }
     }
 }
