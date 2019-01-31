@@ -5,10 +5,12 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Customer
+    static class Rules
     {
-        private bool disposition;
-        private int money;
-        private int accessibility;
+
+        static void ViewRules()
+        {
+           
+        }
     }
 }

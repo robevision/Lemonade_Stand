@@ -5,10 +5,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Customer
+    public class Round
     {
-        private bool disposition;
-        private int money;
-        private int accessibility;
     }
 }

@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Program
+    public class TimeFrame
     {
-        public Game Game
+        public Month Month
         {
-            get => default(LemonadeStand.Game);
+            get => default(LemonadeStand.Month);
             set
             {
             }
-        }
-
-        static void Main(string[] args)
-        {
         }
     }
 }

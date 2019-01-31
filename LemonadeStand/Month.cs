@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Program
+    public class Month
     {
-        public Game Game
+        public Day Day
         {
-            get => default(LemonadeStand.Game);
+            get => default(LemonadeStand.Day);
             set
             {
             }
-        }
-
-        static void Main(string[] args)
-        {
         }
     }
 }

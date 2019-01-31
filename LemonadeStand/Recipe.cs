@@ -5,10 +5,12 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class Customer
+    public class Recipe
     {
-        private bool disposition;
-        private int money;
-        private int accessibility;
+        private int ice;
+        private int lemon;
+        private int sugar;
+
+    
     }
 }
