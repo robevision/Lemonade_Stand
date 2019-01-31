@@ -11,11 +11,11 @@ namespace LemonadeStand
         public int round;
         private int winner;
         private int day;
-        private int amountOfDays;
+        TimeFrame timeFrame;
 
         public Game()
         {
-            amountOfDays = 0;
+            timeFrame = new TimeFrame();
         }
 
 
@@ -25,16 +25,7 @@ namespace LemonadeStand
             
         }
 
-        public void RunTime()
-        {
-            amountOfDays++;
-            if (amountOfDays == 7)
-            {
-
-            }
-            
-            Day day = new Day();
-        }
+        
 
         public MarketPlace MarketPlace
         {
@@ -44,12 +35,6 @@ namespace LemonadeStand
             }
         }
 
-        public TimeFrame TimeFrame
-        {
-            get => default(LemonadeStand.TimeFrame);
-            set
-            {
-            }
-        }
+   
     }
 }

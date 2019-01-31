@@ -10,13 +10,12 @@
   <Class Name="LemonadeStand.Game">
     <Position X="19.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEgAAAAAAAAAIAAAAAAEAgAAAAAAAABAgAAAQAAAAA=</HashCode>
+      <HashCode>AAAgAAABAAAAAIAAAAAAAAAAAAAAAAABAgAAAQAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Player" />
       <Property Name="MarketPlace" />
-      <Property Name="TimeFrame" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Program" Collapsed="true">
@@ -45,13 +44,6 @@
     <TypeIdentifier>
       <HashCode>AABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Recipe.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LemonadeStand.Rules">
-    <Position X="5.25" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Rules.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Round">
@@ -92,35 +84,19 @@
   <Class Name="LemonadeStand.MainMenu">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainMenu.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Rules" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.TimeFrame">
     <Position X="17.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAQAEAgAAAAAIACAAAAAAAAAAAA=</HashCode>
       <FileName>TimeFrame.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Month" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LemonadeStand.Month">
-    <Position X="14.25" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Month.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Day" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Day">
-    <Position X="11.75" Y="3.25" Width="1.5" />
+    <Position X="10.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Day.cs</FileName>
