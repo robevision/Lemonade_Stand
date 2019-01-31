@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LemonadeStand.Customer">
-    <Position X="13.25" Y="6.75" Width="1.5" />
+    <Position X="13.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAEAA=</HashCode>
       <FileName>Customer.cs</FileName>
@@ -10,7 +10,7 @@
   <Class Name="LemonadeStand.Game">
     <Position X="19.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEgAAAAAAAAAIAAAAEAAAAAAAAAEAABAgAAAQAAAAA=</HashCode>
+      <HashCode>AAEgAAAAAAAAAIAAAAAAEAgAAAAAAAABAgAAAQAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -62,7 +62,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.WeatherConditions">
-    <Position X="11" Y="5.25" Width="1.75" />
+    <Position X="8.5" Y="5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAACAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>WeatherConditions.cs</FileName>

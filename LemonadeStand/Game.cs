@@ -11,14 +11,13 @@ namespace LemonadeStand
         public int round;
         private int winner;
         private int day;
+        private int amountOfDays;
 
         public Game()
         {
-
+            amountOfDays = 0;
         }
 
-        public MainMenu mainMenu = new MainMenu();
-       
 
         public Player Player
         {
@@ -26,9 +25,15 @@ namespace LemonadeStand
             
         }
 
-        public void RunDay()
+        public void RunTime()
         {
-            throw new System.NotImplementedException();
+            amountOfDays++;
+            if (amountOfDays == 7)
+            {
+
+            }
+            
+            Day day = new Day();
         }
 
         public MarketPlace MarketPlace
