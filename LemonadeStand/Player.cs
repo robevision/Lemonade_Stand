@@ -10,7 +10,10 @@ namespace LemonadeStand
         private int score;
         private int money;
         public string playerName;
-
+        public Player()
+        {
+            Console.WriteLine($"You have ${Wallet.DisplayMoney()} in your wallet.");
+        }
         public Recipe recipe = new Recipe();
      
 

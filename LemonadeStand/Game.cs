@@ -10,15 +10,18 @@ namespace LemonadeStand
         //HAS A
         public int round;
         private int winner;
-        private int day;
         TimeFrame timeFrame;
+        Player player;
 
         public Game()
         {
             timeFrame = new TimeFrame();
+            player = new Player();
         }
-
-
+        public void CheckGameResult()
+        {
+         
+        }
         public Player Player
         {
             get => default(LemonadeStand.Player);

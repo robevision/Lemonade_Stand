@@ -12,5 +12,9 @@ namespace LemonadeStand
         {
             money = 10;
         }
+        public double DisplayMoney()
+        {
+            return money;
+        }
     }
 }
