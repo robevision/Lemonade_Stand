@@ -8,16 +8,10 @@ namespace LemonadeStand
 {
     class Program
     {
-        public Game Game
-        {
-            get => default(LemonadeStand.Game);
-            set
-            {
-            }
-        }
 
         static void Main(string[] args)
         {
+            new Test();
         }
     }
 }

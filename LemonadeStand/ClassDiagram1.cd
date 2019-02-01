@@ -10,7 +10,7 @@
   <Class Name="LemonadeStand.Game">
     <Position X="19.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAECAQABgABAAIAAAAAAAAAAAAAAAAABAgAAAQAgAAA=</HashCode>
+      <HashCode>AAECAQABgABQAIAABAEAAAAAAAAAAAABAgQAAQAgAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -22,12 +22,9 @@
   <Class Name="LemonadeStand.Program" Collapsed="true">
     <Position X="19.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Game" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Player">
     <Position X="19.75" Y="5" Width="1.5" />
@@ -63,13 +60,6 @@
     <ShowAsAssociation>
       <Property Name="Precipitation" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="LemonadeStand.Sunny">
-    <Position X="0.5" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Sunny.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.MainMenu">
     <Position X="5.25" Y="0.5" Width="1.5" />
@@ -139,6 +129,13 @@
     <TypeIdentifier>
       <HashCode>AAEAQAAgAAAAACAAAAAAAAAAAAIAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Precipitation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Test">
+    <Position X="2" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAABAEAAAgAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Test.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

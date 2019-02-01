@@ -58,7 +58,7 @@
     <Compile Include="Round.cs" />
     <Compile Include="Rules.cs" />
     <Compile Include="Specialty.cs" />
-    <Compile Include="Sunny.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="TimeFrame.cs" />
     <Compile Include="Wallet.cs" />
     <Compile Include="WeatherConditions.cs" />

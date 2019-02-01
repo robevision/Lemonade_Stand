@@ -1,0 +1,7 @@
+C:\Users\theri\OneDrive\Workflow Almanac\Project Files (Misc)\DevCodeCamp\C#\Projects\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe.config
+C:\Users\theri\OneDrive\Workflow Almanac\Project Files (Misc)\DevCodeCamp\C#\Projects\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe
+C:\Users\theri\OneDrive\Workflow Almanac\Project Files (Misc)\DevCodeCamp\C#\Projects\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.pdb
+C:\Users\theri\OneDrive\Workflow Almanac\Project Files (Misc)\DevCodeCamp\C#\Projects\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.csprojAssemblyReference.cache
+C:\Users\theri\OneDrive\Workflow Almanac\Project Files (Misc)\DevCodeCamp\C#\Projects\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.csproj.CoreCompileInputs.cache
+C:\Users\theri\OneDrive\Workflow Almanac\Project Files (Misc)\DevCodeCamp\C#\Projects\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.exe
+C:\Users\theri\OneDrive\Workflow Almanac\Project Files (Misc)\DevCodeCamp\C#\Projects\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.pdb

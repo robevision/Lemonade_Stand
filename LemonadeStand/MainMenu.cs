@@ -38,7 +38,49 @@ namespace LemonadeStand
                     break;
             }
         }
-      // Could I move my prompt for continue playing under the main menu class and have it return a bool that can change after the first bool argument?  static bool 
+        public static void AskContinue()
+        {
+            Console.WriteLine("Would you like to continue playing? (Type Yes or No): ");
+            string continueGameDecision = Console.ReadLine().ToLower();
+            switch (continueGameDecision)
+            {
+                case "no":
+                    AskPlayAgain();
+                    break;
+                case "n":
+                    AskPlayAgain();
+                    break;
+                case "yes":
+                    break;
+                case "y":
+                    break;
+                default:
+                    Console.WriteLine("Please type either Yes or No.");
+                    AskContinue();
+                    break;
+            }
+            // Could I move my prompt for continue playing under the main menu class and have it return a bool that can change after the first bool argument?  static bool 
+        }
+        public static void AskPlayAgain()
+        {
+            Console.WriteLine("You made quite an effort with that lemonade stand business!");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("Would you like to play again? (Type Yes or No): ");
+            string restart = Console.ReadLine().ToLower();
+            if (restart == "yes" || restart == "y")
+            {
+                Game game = new Game();
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+        public static void RollDie(int min, int max)
+        {
+            Random random = new Random();
+            int result = random.Next(min, max);
+        }
     }
-    
+        
 }
