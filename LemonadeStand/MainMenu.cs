@@ -81,10 +81,7 @@ namespace LemonadeStand
             int result = random.Next(min, max);
             return result;
         }
-        public static int GetGameMode()
-        {
-            return 6;
-        }
+     
     }
         
 }

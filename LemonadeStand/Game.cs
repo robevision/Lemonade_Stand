@@ -9,6 +9,7 @@ namespace LemonadeStand
     {
         //HAS A
         int gameMode;
+        int die;
         TimeFrame timeFrame;
         Player player;
         MarketPlace marketPlace;
@@ -84,6 +85,37 @@ namespace LemonadeStand
                     break;
             }        
 
+        }
+        public int GetGameModeDie()
+        {
+            int gameMode = PassGameMode();
+            if(gameMode == 1)
+            {
+                die = 6;
+            }
+            if(gameMode == 2)
+            {
+                die = 12;
+            }
+            if(gameMode == 3)
+            {
+                die = 30; 
+            }
+            return die;
+            //WeatherConditions weatherConditions = new WeatherConditions();
+            //weatherConditions.HasBadWeather(GetGameModeDie());
+        }
+        public int PassGameMode()
+        {
+            if(gameMode== null)
+            {
+                gameMode = 1;
+                return gameMode;
+            }
+            else
+            {
+                return gameMode;
+            }
         }
         
         public Player Player
