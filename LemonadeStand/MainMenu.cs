@@ -7,6 +7,11 @@ namespace LemonadeStand
 {
     static class MainMenu
     {
+        static Random random;
+        static MainMenu()
+        {
+            random = new Random();
+        }
         static void ViewRules()
         {
             Console.WriteLine("What information are you looking for? game objective(1) how to make money(2) recipes(3) weather(4)");
@@ -77,7 +82,6 @@ namespace LemonadeStand
         }
         public static int RollDie(int min, int max)
         {
-            Random random = new Random();
             int result = random.Next(min, max);
             return result;
         }

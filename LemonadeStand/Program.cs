@@ -12,6 +12,7 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             WeatherConditions weatherConditions = new WeatherConditions();
+            weatherConditions.GetForecast();
             System.Threading.Thread.Sleep(1000);
             System.Threading.Thread.Sleep(1000);
         }

@@ -22,6 +22,7 @@ namespace LemonadeStand
         Game game;
         public WeatherConditions()
         {
+            random = new Random();
             HasBadWeather(6);
             HasGoodWeather(6);
             HasPrecipitation(6);
@@ -74,33 +75,15 @@ namespace LemonadeStand
         }
         public void GetForecast()
         {
-            List<string> dayOne= GrabDailyWeather();
-            
-            //dayTwo=
-            HasBadWeather(6);
-            HasGoodWeather(6);
-            HasPrecipitation(6);
-            GetTemperature(outcome);
-            GeneratePrecipitation();
-            //dayThree=
-            HasBadWeather(6);
-            HasGoodWeather(6);
-            HasPrecipitation(6);
-            GetTemperature(outcome);
-            GeneratePrecipitation();
-            //dayFour=
-            HasBadWeather(6);
-            HasGoodWeather(6);
-            HasPrecipitation(6);
-            GetTemperature(outcome);
-            GeneratePrecipitation();
-            //dayFive=
-            HasBadWeather(6);
-            HasGoodWeather(6);
-            HasPrecipitation(6);
-            GetTemperature(outcome);
-            GeneratePrecipitation();
-            //daySix=
+            List<string> dayOne = GrabDailyWeather();
+            List<string> dayTwo = GrabDailyWeather();
+            List<string> dayThree = GrabDailyWeather();
+            List<string> dayFour = GrabDailyWeather();
+            List<string> dayFive = GrabDailyWeather();
+            List<string> daySix = GrabDailyWeather();
+            List<string> daySeven = GrabDailyWeather();
+
+
         }
         public List<string> GrabDailyWeather()
         {
@@ -124,24 +107,24 @@ namespace LemonadeStand
         }
         public void GetTemperature(int outcome)
         {
-            random = new Random();
+            
             temperature = random.Next(outcome,100);
         }
         public void GeneratePrecipitation()
         {
             if (temperature < 32 && badWeather == true && precipitation == true)
             {
-                string currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(0, 1)];
+                 currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(0, 1)];
                 
             }
             if (temperature == 32 && badWeather == true && precipitation == true)
             {
-                string currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(0, 3)];
+                 currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(0, 3)];
                 
             }
             if (temperature > 32 && badWeather == true && precipitation == true)
             {
-                string currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(2, 3)];
+                 currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(2, 3)];
             }
                 
         }
