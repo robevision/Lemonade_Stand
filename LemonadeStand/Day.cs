@@ -7,6 +7,10 @@ namespace LemonadeStand
 {
     public class Day
     {
+        public Day()
+        {
+            CheckWeatherConditions();
+        }
         public WeatherConditions WeatherConditions
         {
             get => default(LemonadeStand.WeatherConditions);
@@ -21,6 +25,14 @@ namespace LemonadeStand
             set
             {
             }
+        }
+        public void SetHour()
+        {
+        
+        }
+        public void CheckWeatherConditions()
+        {
+
         }
     }
 }

@@ -15,5 +15,13 @@ namespace LemonadeStand
         {
             throw new System.NotImplementedException();
         }
+        public void HasBadWeather()
+        {
+
+        }
+        public void HasGoodWeather()
+        {
+
+        }
     }
 }

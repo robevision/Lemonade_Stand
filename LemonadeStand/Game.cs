@@ -113,6 +113,12 @@ namespace LemonadeStand
             }
         }
 
-   
+        public TimeFrame TimeFrame
+        {
+            get => default(TimeFrame);
+            set
+            {
+            }
+        }
     }
 }

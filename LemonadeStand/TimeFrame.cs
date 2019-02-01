@@ -19,6 +19,15 @@ namespace LemonadeStand
             amountOfMonths = 0;
             amountOfYears = 0;
         }
+
+        public Day Day
+        {
+            get => default(Day);
+            set
+            {
+            }
+        }
+
         public void RunTime()
         {
 
