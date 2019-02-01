@@ -48,5 +48,9 @@ namespace LemonadeStand
         {
             return amountOfWeeks;
         }
+        public int DisplayDay()
+        {
+            return amountOfDays;
+        }
     }
 }
