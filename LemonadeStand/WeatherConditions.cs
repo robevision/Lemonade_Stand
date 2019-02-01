@@ -25,8 +25,15 @@ namespace LemonadeStand
         }
         public bool HasBadWeather()
         {
-            new Random().Next();
-            return true;
+            if(MainMenu.RollDie(0,MainMenu.GetGameMode()) > 4)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
         public bool HasGoodWeather()
         {

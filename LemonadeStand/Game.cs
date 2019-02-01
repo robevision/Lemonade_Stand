@@ -8,14 +8,10 @@ namespace LemonadeStand
     public class Game
     {
         //HAS A
-        public int round;
-        private int winner;
+        int gameMode;
         TimeFrame timeFrame;
         Player player;
         MarketPlace marketPlace;
-        Random random;
-        int[] rolls;
-        int result;
 
         public Game()
         {
@@ -23,12 +19,7 @@ namespace LemonadeStand
             player = new Player();
             marketPlace = new MarketPlace();
         }
-        public int RollDie()
-        {
-            random = new Random();
-            result = rolls[random.Next(0 , 6)];
-            return result;
-        }
+      
         public bool CheckGameResult()
         {
         
@@ -68,6 +59,31 @@ namespace LemonadeStand
             {
 
             }
+        }
+        public void ChooseGameMode()
+        {
+            Console.WriteLine("What level of difficulty would you like to play at? (Enter a value from 1 through 3): ");
+            string difficultyLevel = Console.ReadLine();
+            switch (difficultyLevel)
+            {
+                case "1":
+                    Console.WriteLine("You chose easy mode.");
+                    gameMode = 1;
+                    break;
+                case "2":
+                    Console.WriteLine("You chose normal mode.");
+                    gameMode = 2;
+                    break;
+                case "3":
+                    Console.WriteLine("You chose hard mode.");
+                    gameMode = 3;
+                    break;
+                default:
+                    Console.WriteLine("Please type a number from 1 through 3.");
+                    ChooseGameMode();
+                    break;
+            }        
+
         }
         
         public Player Player

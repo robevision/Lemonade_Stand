@@ -59,7 +59,6 @@ namespace LemonadeStand
                     AskContinue();
                     break;
             }
-            // Could I move my prompt for continue playing under the main menu class and have it return a bool that can change after the first bool argument?  static bool 
         }
         public static void AskPlayAgain()
         {
@@ -76,10 +75,15 @@ namespace LemonadeStand
                 Environment.Exit(0);
             }
         }
-        public static void RollDie(int min, int max)
+        public static int RollDie(int min, int max)
         {
             Random random = new Random();
             int result = random.Next(min, max);
+            return result;
+        }
+        public static int GetGameMode()
+        {
+            return 6;
         }
     }
         
