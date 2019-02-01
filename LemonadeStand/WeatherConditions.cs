@@ -14,6 +14,7 @@ namespace LemonadeStand
         bool badWeather;
         bool goodWeather;
         int outcome;
+        string currentPrecipitation;
         List<string> typeOfPrecipitation = new List<string>()
         {
             "snow", "hail", "rain","rain",
@@ -69,7 +70,7 @@ namespace LemonadeStand
         }
         public void GetForecast()
         {
-
+            Console.WriteLine(currentPrecipitation + temperature); 
         }
         public void GetActualWeather()
         {
@@ -85,9 +86,19 @@ namespace LemonadeStand
             if (temperature < 32 && badWeather == true && precipitation == true)
             {
                 string currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(0, 1)];
-                Console.WriteLine(currentPrecipitation);
-                System.Threading.Thread.Sleep(1000);
+                
             }
+            if (temperature == 32 && badWeather == true && precipitation == true)
+            {
+                string currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(0, 3)];
+                
+            }
+            if (temperature > 32 && badWeather == true && precipitation == true)
+            {
+                string currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(2, 3)];
+            }
+                
         }
+
     }
 }
