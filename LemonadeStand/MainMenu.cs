@@ -38,5 +38,7 @@ namespace LemonadeStand
                     break;
             }
         }
+      // Could I move my prompt for continue playing under the main menu class and have it return a bool that can change after the first bool argument?  static bool 
     }
+    
 }
