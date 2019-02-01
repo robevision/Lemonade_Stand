@@ -39,6 +39,10 @@ namespace LemonadeStand
                     precipitation = true;
                 }
             }
+            else
+            {
+                currentPrecipitation = "none";
+            }
         }
         public void HasBadWeather(int die)
         {
@@ -70,7 +74,48 @@ namespace LemonadeStand
         }
         public void GetForecast()
         {
-            Console.WriteLine(currentPrecipitation + temperature); 
+            GrabDailyWeather();
+            
+            //dayTwo=
+            HasBadWeather(6);
+            HasGoodWeather(6);
+            HasPrecipitation(6);
+            GetTemperature(outcome);
+            GeneratePrecipitation();
+            //dayThree=
+            HasBadWeather(6);
+            HasGoodWeather(6);
+            HasPrecipitation(6);
+            GetTemperature(outcome);
+            GeneratePrecipitation();
+            //dayFour=
+            HasBadWeather(6);
+            HasGoodWeather(6);
+            HasPrecipitation(6);
+            GetTemperature(outcome);
+            GeneratePrecipitation();
+            //dayFive=
+            HasBadWeather(6);
+            HasGoodWeather(6);
+            HasPrecipitation(6);
+            GetTemperature(outcome);
+            GeneratePrecipitation();
+            //daySix=
+        }
+        public void GrabDailyWeather()
+        {
+            HasBadWeather(6);
+            HasGoodWeather(6);
+            HasPrecipitation(6);
+            GetTemperature(outcome);
+            GeneratePrecipitation();
+            Console.WriteLine(temperature);
+            Console.WriteLine(currentPrecipitation);
+            string textOfTemperature = Convert.ToString(temperature);
+            List<string> dayForecastAnalysis = new List<string>()
+            {
+            textOfTemperature, currentPrecipitation
+            };
         }
         public void GetActualWeather()
         {
