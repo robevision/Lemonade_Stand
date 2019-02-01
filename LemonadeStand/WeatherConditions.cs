@@ -7,22 +7,26 @@ namespace LemonadeStand
 {
     public class WeatherConditions
     {
-        private int temperature;
+        Random random;
+        int temperature;
         private bool precipitation;
         private int naturalDisaster;
         bool badWeather;
         bool goodWeather;
+        int outcome;
+        List<string> typeOfPrecipitation = new List<string>()
+        {
+            "snow", "hail", "rain","rain",
+        };
         Game game;
         public WeatherConditions()
         {
+            HasBadWeather(6);
+            HasGoodWeather(6);
+            HasPrecipitation(6);
+            GetTemperature(outcome);
+            GeneratePrecipitation();
           
-        }
-        public Precipitation Precipitation
-        {
-            get => default(Precipitation);
-            set
-            {
-            }
         }
 
         public void HasPrecipitation(int die)
@@ -39,6 +43,7 @@ namespace LemonadeStand
         {
             if(MainMenu.RollDie(0, die) < 4)
             {
+                    outcome = 0;
                bool badWeather = true;
                
             }
@@ -57,9 +62,32 @@ namespace LemonadeStand
             }
             else
             {
+                outcome = 60;
                 return true;
             }
 
+        }
+        public void GetForecast()
+        {
+
+        }
+        public void GetActualWeather()
+        {
+
+        }
+        public void GetTemperature(int outcome)
+        {
+            random = new Random();
+            temperature = random.Next(outcome,100);
+        }
+        public void GeneratePrecipitation()
+        {
+            if (temperature < 32 && badWeather == true && precipitation == true)
+            {
+                string currentPrecipitation = typeOfPrecipitation[MainMenu.RollDie(0, 1)];
+                Console.WriteLine(currentPrecipitation);
+                System.Threading.Thread.Sleep(1000);
+            }
         }
     }
 }

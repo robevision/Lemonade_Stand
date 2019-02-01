@@ -56,12 +56,9 @@
   <Class Name="LemonadeStand.WeatherConditions">
     <Position X="8.5" Y="5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAACAAEAAgABAAAAAAAAQAAgAIABQAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAACAABAQgABAAIAAAAAQAAgAIABQCAAAAAAA=</HashCode>
       <FileName>WeatherConditions.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Precipitation" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.MainMenu">
     <Position X="5.25" Y="0.5" Width="1.5" />
@@ -71,7 +68,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.TimeFrame">
-    <Position X="17" Y="1.5" Width="1.5" />
+    <Position X="3.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAAAAAQAEAgAAAAAIACAgAAAAAAAAAg=</HashCode>
       <FileName>TimeFrame.cs</FileName>
@@ -124,7 +121,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Precipitation">
-    <Position X="6.5" Y="8.75" Width="1.5" />
+    <Position X="2" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAQAAgAAAAACAAAAAAAAAAAAIAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Precipitation.cs</FileName>
