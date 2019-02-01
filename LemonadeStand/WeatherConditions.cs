@@ -74,7 +74,7 @@ namespace LemonadeStand
         }
         public void GetForecast()
         {
-            GrabDailyWeather();
+            List<string> dayOne= GrabDailyWeather();
             
             //dayTwo=
             HasBadWeather(6);
@@ -102,7 +102,7 @@ namespace LemonadeStand
             GeneratePrecipitation();
             //daySix=
         }
-        public void GrabDailyWeather()
+        public List<string> GrabDailyWeather()
         {
             HasBadWeather(6);
             HasGoodWeather(6);
@@ -116,6 +116,7 @@ namespace LemonadeStand
             {
             textOfTemperature, currentPrecipitation
             };
+            return dayForecastAnalysis;
         }
         public void GetActualWeather()
         {
