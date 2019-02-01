@@ -55,5 +55,21 @@ namespace LemonadeStand
             {
             }
         }
+
+        public Player Player1
+        {
+            get => default(Player);
+            set
+            {
+            }
+        }
+
+        public Recipe Recipe
+        {
+            get => default(Recipe);
+            set
+            {
+            }
+        }
     }
 }

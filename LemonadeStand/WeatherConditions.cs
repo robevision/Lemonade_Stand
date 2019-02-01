@@ -13,7 +13,10 @@ namespace LemonadeStand
         bool badWeather;
         bool goodWeather;
         Game game;
-
+        public WeatherConditions()
+        {
+          
+        }
         public Precipitation Precipitation
         {
             get => default(Precipitation);
@@ -22,9 +25,15 @@ namespace LemonadeStand
             }
         }
 
-        public void HasPrecipitation()
+        public void HasPrecipitation(int die)
         {
-            throw new System.NotImplementedException();
+            if (badWeather == true)
+            {
+                if(MainMenu.RollDie(0, die) >= 4)
+                {
+                    precipitation = true;
+                }
+            }
         }
         public void HasBadWeather(int die)
         {
@@ -39,7 +48,7 @@ namespace LemonadeStand
             }
             
         }
-        public bool HasGoodWeather()
+        public bool HasGoodWeather(int die)
         {
             //created a parameter and now need to define it without affecting the outcome:  
             if (badWeather == true)

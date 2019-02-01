@@ -81,7 +81,44 @@ namespace LemonadeStand
             int result = random.Next(min, max);
             return result;
         }
-     
+        //public static int GetGameModeDie()
+        //{
+        //    int gameMode = PassGameMode();
+        //    if (gameMode == 1)
+        //    {
+        //        int die = 6;
+        //        return die;
+        //    }
+        //    if (gameMode == 2)
+        //    {
+        //        int die = 12;
+        //        return die;
+        //    }
+        //    if (gameMode == 3)
+        //    {
+        //        int die = 30;
+        //        return die;
+        //    }
+        //    else
+        //    {
+        //        return 6;
+        //    }
+            
+        //    //WeatherConditions weatherConditions = new WeatherConditions();
+        //    //weatherConditions.HasBadWeather(GetGameModeDie());
+        //}
+        //public static int PassGameMode()
+        //{
+        //    if (gameMode == null)
+        //    {
+        //        int gameMode = 1;
+        //        return gameMode;
+        //    }
+        //    else
+        //    {
+        //        return gameMode;
+        //    }
+        //}
     }
         
 }

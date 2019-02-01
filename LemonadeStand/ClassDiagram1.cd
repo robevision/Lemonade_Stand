@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LemonadeStand.Customer">
-    <Position X="13.5" Y="5" Width="1.5" />
+    <Position X="15.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAEAA=</HashCode>
       <FileName>Customer.cs</FileName>
@@ -10,13 +10,13 @@
   <Class Name="LemonadeStand.Game">
     <Position X="19.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAECAQABgABQAIAABAEAAAAAAAAAAAABAgQAAQAgAAA=</HashCode>
+      <HashCode>BAAAAQABoCAAAAAAAAAAAAAAAAAAAAABAAAAAQIgAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Player" />
       <Property Name="MarketPlace" />
-      <Property Name="TimeFrame" />
+      <Property Name="Day" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Program" Collapsed="true">
@@ -27,14 +27,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Player">
-    <Position X="19.75" Y="5" Width="1.5" />
+    <Position X="19.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAQAAAAEEIIAIAACAAAAAAAAAACgAAEAA=</HashCode>
+      <HashCode>AAAAAABAgAAAQAAAgEEIIAIAACAAAAAAAAAACgAAEAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Inventory" />
       <Property Name="Wallet" />
+      <Property Name="Player1" />
+      <Property Name="Recipe" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Recipe">
@@ -54,7 +56,7 @@
   <Class Name="LemonadeStand.WeatherConditions">
     <Position X="8.5" Y="5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAACAAEAAAABAAAAAAAAQAAAAAABQAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAACAAEAAgABAAAAAAAAQAAgAIABQAAAAAAAA=</HashCode>
       <FileName>WeatherConditions.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -64,24 +66,21 @@
   <Class Name="LemonadeStand.MainMenu">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAABQAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.TimeFrame">
-    <Position X="17.25" Y="2.75" Width="1.5" />
+    <Position X="17" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAIAAAAAAAAAQAEAgAAAAAIACAgAAAAAAAAAg=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAQAEAgAAAAAIACAgAAAAAAAAAg=</HashCode>
       <FileName>TimeFrame.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Day" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Day">
-    <Position X="10.5" Y="3" Width="1.5" />
+    <Position X="14.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAEAAAAAAAAAACAAAAAAAAAACAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAEIAAAAAAAAACAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -125,7 +124,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Precipitation">
-    <Position X="8.5" Y="8" Width="1.5" />
+    <Position X="6.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAQAAgAAAAACAAAAAAAAAAAAIAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Precipitation.cs</FileName>
@@ -134,7 +133,7 @@
   <Class Name="LemonadeStand.Test">
     <Position X="2" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAQAAAABAEAAAgAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAQAAAABAAAAAgAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Test.cs</FileName>
     </TypeIdentifier>
   </Class>
