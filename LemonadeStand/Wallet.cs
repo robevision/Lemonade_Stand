@@ -8,6 +8,8 @@ namespace LemonadeStand
     public class Wallet
     {
         private double money;
+        private double beginningBalance = 0;
+        private double weeklyBalance;
         public Wallet()
         {
             money = 10;
@@ -15,6 +17,15 @@ namespace LemonadeStand
         public double DisplayMoney()
         {
             return money;
+        }
+        public double GetWeeklyBalance()
+        {
+          weeklyBalance = money - beginningBalance;
+            return weeklyBalance;
+        }
+        public void CalculateBeginningBalance()
+        {
+            beginningBalance = money - weeklyBalance;
         }
     }
 }

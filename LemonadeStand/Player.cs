@@ -10,22 +10,15 @@ namespace LemonadeStand
         private int score;
         private int money;
         public string playerName;
+        Wallet wallet;
         public Player()
         {
-            Console.WriteLine($"You have ${Wallet.DisplayMoney()} in your wallet.");
+            CheckWallet();
+            wallet = new Wallet();
+
         }
         public Recipe recipe = new Recipe();
-     
-
    
-
-        public Wallet Wallet
-        {
-            get => default(LemonadeStand.Wallet);
-            set
-            {
-            }
-        }
 
         public Inventory Inventory
         {
@@ -52,7 +45,15 @@ namespace LemonadeStand
 
         public void CheckWallet()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"You have ${Wallet.DisplayMoney()} in your wallet.");
+        }
+
+        public Wallet Wallet
+        {
+            get => default(Wallet);
+            set
+            {
+            }
         }
     }
 }

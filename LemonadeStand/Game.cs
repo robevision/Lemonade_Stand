@@ -36,14 +36,22 @@ namespace LemonadeStand
         {
             if (CheckGameResult() == true)
             {
-                if (Player.Wallet.DisplayMoney() > 10)
+                if (Player.Wallet.DisplayMoney() > Player.Wallet.GetWeeklyBalance())
                 {
                     Console.WriteLine("Congratulations on having a successful business! You've earned more than what you started with!");
+                    Player.Wallet.CalculateBeginningBalance();
                     AskContinue();
                 }
-                if (Player.Wallet.DisplayMoney() == 10)
+                if (Player.Wallet.DisplayMoney() == Player.Wallet.GetWeeklyBalance())
                 {
                     Console.WriteLine("You broke even on your investment as a lemonade stand owner! You did not win, but you also did not lose.");
+                    Player.Wallet.CalculateBeginningBalance();
+                    AskContinue();
+                }
+                if (Player.Wallet.DisplayMoney() < Player.Wallet.GetWeeklyBalance())
+                {
+                    Console.WriteLine("Not good! You did not turn a profit! You have lost the game. You can always appeal by going another week.");
+                    Player.Wallet.CalculateBeginningBalance();
                     AskContinue();
                 }
             }
@@ -54,7 +62,7 @@ namespace LemonadeStand
         }
         public void AskContinue()
         {
-            Console.WriteLine("Would you like to continue playing? (Type yes or no): ");
+            Console.WriteLine("Would you like to continue playing? (Type Yes or No): ");
             string continueGameDecision = Console.ReadLine().ToLower();
             switch (continueGameDecision)
             {
@@ -69,6 +77,8 @@ namespace LemonadeStand
                 case "y":
                     break;
                 default:
+                    Console.WriteLine("Please type either Yes or No.");
+                    AskContinue();
                     break;
             }
         }
