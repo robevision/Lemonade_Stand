@@ -57,23 +57,12 @@
   <Class Name="LemonadeStand.WeatherConditions">
     <Position X="8.5" Y="5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAACAAAAAAABAAAAAAAAQAAAAAABQAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAACAAEAAAABAAAAAAAAQAAAAAABQAAAAAAAA=</HashCode>
       <FileName>WeatherConditions.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="LemonadeStand.GoodWeather">
-    <Position X="3.75" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GoodWeather.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LemonadeStand.BadWeather">
-    <Position X="8" Y="8" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAEEQAAgIAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BadWeather.cs</FileName>
-    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Precipitation" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.Sunny">
     <Position X="0.5" Y="8.25" Width="1.5" />
@@ -143,6 +132,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Specialty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Precipitation">
+    <Position X="8.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAQAAgAAAAACAAAAAAAAAAAAIAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Precipitation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

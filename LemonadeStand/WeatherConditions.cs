@@ -11,16 +11,33 @@ namespace LemonadeStand
         private bool precipitation;
         private int naturalDisaster;
 
+        public Precipitation Precipitation
+        {
+            get => default(Precipitation);
+            set
+            {
+            }
+        }
+
         public void HasPrecipitation()
         {
             throw new System.NotImplementedException();
         }
-        public void HasBadWeather()
+        public bool HasBadWeather()
         {
-
+            new Random().Next();
+            return true;
         }
-        public void HasGoodWeather()
+        public bool HasGoodWeather()
         {
+            if (HasBadWeather() == true)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
 
         }
     }
