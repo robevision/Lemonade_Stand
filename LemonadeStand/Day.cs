@@ -7,14 +7,15 @@ namespace LemonadeStand
 {
     public class Day
     {
-        List<string> weather;
+    
         public WeatherConditions weatherConditions;
-        Game game;
         public Day()
         {
             weatherConditions = new WeatherConditions();
-            //weather = weatherConditions.GrabDailyWeather();
-            game.AddDays();
+        }
+        public void DisplayWeather()
+        {
+        
         }
        
 

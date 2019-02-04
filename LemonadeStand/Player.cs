@@ -13,8 +13,8 @@ namespace LemonadeStand
         Wallet wallet;
         public Player()
         {
-            CheckWallet();
             wallet = new Wallet();
+            CheckWallet();
 
         }
         public Recipe recipe = new Recipe();
@@ -45,7 +45,7 @@ namespace LemonadeStand
 
         public void CheckWallet()
         {
-            Console.WriteLine($"You have ${Wallet.DisplayMoney()} in your wallet.");
+            Console.WriteLine($"You have ${wallet.DisplayMoney()} in your wallet.");
         }
 
         public Wallet Wallet

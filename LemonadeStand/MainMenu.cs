@@ -12,7 +12,7 @@ namespace LemonadeStand
         {
             random = new Random();
         }
-        static void ViewRules()
+        public static void ViewRules()
         {
             Console.WriteLine("What information are you looking for? game objective(1) how to make money(2) recipes(3) weather(4)");
             Console.WriteLine("If you are done reviewing the rules, to exit, type (5)");
@@ -83,6 +83,7 @@ namespace LemonadeStand
         public static int RollDie(int min, int max)
         {
             int result = random.Next(min, max);
+        
             return result;
         }
         //public static int GetGameModeDie()

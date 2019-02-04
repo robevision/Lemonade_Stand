@@ -11,7 +11,7 @@ namespace LemonadeStand
 
         static void Main(string[] args)
         {
-            Day day = new Day();
+            Game game = new Game();
             System.Threading.Thread.Sleep(1000);
             System.Threading.Thread.Sleep(1000);
         }
