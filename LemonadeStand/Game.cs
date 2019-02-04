@@ -17,7 +17,9 @@ namespace LemonadeStand
         int playLengthNumber;
         int amountOfDays;
         Day day;
+        Customer customer;
         List<Day> daysOfWeek;
+        List<Customer> listOfCustomers;
 
         public Game()
         {
@@ -63,7 +65,8 @@ namespace LemonadeStand
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
-            Customer customer = new Customer();
+            customer = new Customer();
+            listOfCustomers.Add(customer);
         }
         public void DisplayDailyWeather()
         {

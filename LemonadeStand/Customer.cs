@@ -12,30 +12,33 @@ namespace LemonadeStand
         string firstName;
         string lastName;
         string amount;
-        private int accessibility;
-        public List<string> customer;
-        public List<Customer> listOfCustomers;
-        public List<string> firstNames = new List<string>()
+        private bool accessibility;
+        private List<string> customer;
+        private List<Customer> listOfCustomers;
+        private List<string> firstNames = new List<string>()
         {
             "Billy", "Jose", "Geraldo","Bob", "Frank","Edgar","Molly", "Meredith", "Adam", "Larry", "George", "Sally","Susan","Marquise","Calvin","Mike","Maggie", "Margaret", "Elizabeth","John","Matt"
         };
-        public List<string> lastNames = new List<string>()
+        private List<string> lastNames = new List<string>()
         {
             "Smith","Sutton","Jones","Warpinski","Stark","Matthews","James","Certon","Yiannopolis","Hering","Varney","Jacobson","Justice","Tolken","Bezier","Messier","King"
         };
-    public Customer()
+        public Customer()
         {
-            //EvaluateAccessibility();
+            EvaluateAccessibility();
             GetName();
             GetMoneyAmount();
             GetDisposition();
             DisplayCustomer();
         }
-
-        //public void EvaluateAccessibility()
-        //{
-        //    if (Game.daysOfWeek(i).temperature == )
-        //}
+        
+        public void EvaluateAccessibility()
+        {
+            //if (temperature >= 60)
+            //{
+            //    accessibility = true;
+            //}
+        }
         public void GetName()
         {
           firstName = (firstNames[MainMenu.RollDie(0, 20)]);
