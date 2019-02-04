@@ -63,6 +63,7 @@ namespace LemonadeStand
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
+            Customer customer = new Customer();
         }
         public void DisplayDailyWeather()
         {

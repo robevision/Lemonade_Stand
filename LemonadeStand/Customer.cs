@@ -9,38 +9,52 @@ namespace LemonadeStand
     {
         private bool disposition;
         private int money;
+        string firstName;
+        string lastName;
+        string amount;
         private int accessibility;
-        List<string> customer;
-        List<string> firstName = new List<string>()
+        public List<string> customer;
+        public List<Customer> listOfCustomers;
+        public List<string> firstNames = new List<string>()
         {
             "Billy", "Jose", "Geraldo","Bob", "Frank","Edgar","Molly", "Meredith", "Adam", "Larry", "George", "Sally","Susan","Marquise","Calvin","Mike","Maggie", "Margaret", "Elizabeth","John","Matt"
         };
-        List<string> lastName = new List<string>()
+        public List<string> lastNames = new List<string>()
         {
             "Smith","Sutton","Jones","Warpinski","Stark","Matthews","James","Certon","Yiannopolis","Hering","Varney","Jacobson","Justice","Tolken","Bezier","Messier","King"
         };
     public Customer()
         {
+            //EvaluateAccessibility();
             GetName();
             GetMoneyAmount();
             GetDisposition();
-
+            DisplayCustomer();
         }
-    public void GetName()
+
+        //public void EvaluateAccessibility()
+        //{
+        //    if (Game.daysOfWeek(i).temperature == )
+        //}
+        public void GetName()
         {
-            customer.Add (firstName[MainMenu.RollDie(0, 40)]);
-            customer.Add(lastName[MainMenu.RollDie(0, 40)]);
+          firstName = (firstNames[MainMenu.RollDie(0, 20)]);
+          lastName = (lastNames[MainMenu.RollDie(0, 16)]);
         }
         public void GetMoneyAmount()
         {
-            money = MainMenu.RollDie(0, 100) * MainMenu.RollDie(0, 100);
+            money = MainMenu.RollDie(0, 20) + MainMenu.RollDie(0, 20);
             string textOfMoney = Convert.ToString(money);
-            customer.Add(textOfMoney);
+            amount = (textOfMoney);
         }
         public void GetDisposition()
         {
-
+           //if (amount >= cup price...
+        }
+        public void DisplayCustomer()
+        {
+            Console.WriteLine($"{firstName} {lastName} {amount}");
         }
     }
-    
-}
+
+    }
