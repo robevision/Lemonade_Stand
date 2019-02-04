@@ -13,6 +13,7 @@ namespace LemonadeStand
         string lastName;
         string amount;
         private bool accessibility;
+        int temperaturePreference;
         private List<string> customer;
         private List<Customer> listOfCustomers;
         private List<string> firstNames = new List<string>()
@@ -25,19 +26,24 @@ namespace LemonadeStand
         };
         public Customer()
         {
-            EvaluateAccessibility();
+            GetTemperaturePreference();
             GetName();
             GetMoneyAmount();
             GetDisposition();
             DisplayCustomer();
         }
         
-        public void EvaluateAccessibility()
+        public void GetTemperaturePreference()
         {
-            //if (temperature >= 60)
-            //{
-            //    accessibility = true;
-            //}
+            if (MainMenu.RollDie(0, 50) > 1)
+            {
+             temperaturePreference = (MainMenu.RollDie(60,100))
+            }
+            else
+            {
+             temperaturePreference = (MainMenu.RollDie(0, 100));
+            }
+            
         }
         public void GetName()
         {
