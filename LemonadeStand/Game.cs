@@ -42,11 +42,19 @@ namespace LemonadeStand
             //daysOfWeek[0]
             //int dayTemperature = daysOfWeek[0].weatherConditions.temperature;
         }
-        public void DisplayWeather()
+        public void DisplayWeeklyWeather()
         {
-            for (int i = 0; i < 7; i++)
+            try
             {
-                Console.WriteLine(daysOfWeek[i].weatherConditions);
+                for (int i = 0; i < 7; i++)
+                {
+                    Console.WriteLine($"The sky is {daysOfWeek[i].weatherConditions.condition}, it is {daysOfWeek[i].weatherConditions.temperature}°F, with {daysOfWeek[i].weatherConditions.precipitation}.");
+                    System.Threading.Thread.Sleep(2000);
+                }
+            }
+            catch
+            {
+                return;
             }
         }
         public void RunGame()
@@ -54,7 +62,7 @@ namespace LemonadeStand
             MainMenu.ViewRules();
             GetPlayLength();
             ConvertToDays();
-            DisplayDailyWeather();
+            DisplayWeeklyWeather();
         }
         public void DisplayDailyWeather()
         {

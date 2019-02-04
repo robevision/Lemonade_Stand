@@ -13,10 +13,6 @@ namespace LemonadeStand
         {
             weatherConditions = new WeatherConditions();
         }
-        public void DisplayWeather()
-        {
-        
-        }
        
 
         public Customer Customer
