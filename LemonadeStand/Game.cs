@@ -66,10 +66,21 @@ namespace LemonadeStand
         }
         public void DisplayDailyWeather()
         {
-            Console.WriteLine($"The sky is {daysOfWeek[0].weatherConditions.condition}, it is {daysOfWeek[0].weatherConditions.temperature}°F, with {daysOfWeek[0].weatherConditions.precipitation}.");
+            Console.WriteLine($"The sky is {daysOfWeek[0].weatherConditions.condition}, it is {daysOfWeek[0].weatherConditions.temperature}°F, with {daysOfWeek[0].weatherConditions.precipitationAmount}{daysOfWeek[0].weatherConditions.precipitation}.");
         }
-      
-        
+
+        public void DisplayActualWeather()
+        {
+            if(MainMenu.RollDie(0,3) == 0)
+            {
+               
+            }
+           
+        }
+        public void OpenStand()
+        {
+            
+        }
         
         
         public Player Player
