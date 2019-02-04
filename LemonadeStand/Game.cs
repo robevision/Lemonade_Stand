@@ -13,54 +13,70 @@ namespace LemonadeStand
         TimeFrame timeFrame;
         Player player;
         MarketPlace marketPlace;
+        string playLength;
+        int playLengthNumber;
+        Day day;
 
         public Game()
         {
-            timeFrame = new TimeFrame();
+            //timeFrame = new TimeFrame();
             player = new Player();
             marketPlace = new MarketPlace();
         }
-      
-        public bool CheckGameResult()
+      public void GetPlayLength()
         {
+            Console.WriteLine("How many days would you like to play for?");
+            playLength = Console.ReadLine();
+            playLengthNumber = Convert.ToInt32(playLength);
+        }
+       public void ConvertToDays()
+        {
+            for (int index = 0; index < playLengthNumber; index++)
+            {
+                day = new Day();
+            }
+            
+        }
+        //public bool CheckGameResult()
+        //{
         
-            if (timeFrame.DisplayWeek() >= 1 && timeFrame.DisplayDay() == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public void PresentGameResult()
-        {
-            if (CheckGameResult() == true)
-            {
-                if (Player.Wallet.DisplayMoney() > Player.Wallet.GetWeeklyBalance())
-                {
-                    Console.WriteLine("Congratulations on having a successful business! You've earned more than what you started with!");
-                    Player.Wallet.CalculateBeginningBalance();
-                    MainMenu.AskContinue();
-                }
-                if (Player.Wallet.DisplayMoney() == Player.Wallet.GetWeeklyBalance())
-                {
-                    Console.WriteLine("You broke even on your investment as a lemonade stand owner! You did not win, but you also did not lose.");
-                    Player.Wallet.CalculateBeginningBalance();
-                    MainMenu.AskContinue();
-                }
-                if (Player.Wallet.DisplayMoney() < Player.Wallet.GetWeeklyBalance())
-                {
-                    Console.WriteLine("Not good! You did not turn a profit! You have lost the game. You can always appeal by going another week.");
-                    Player.Wallet.CalculateBeginningBalance();
-                    MainMenu.AskContinue();
-                }
-            }
-            else
-            {
+        //    if (timeFrame.DisplayWeek() >= 1 && timeFrame.DisplayDay() == 0)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+        //public void PresentGameResult()
+        //{
+        //    if (CheckGameResult() == true)
+        //    {
+        //        if (Player.Wallet.DisplayMoney() > Player.Wallet.GetWeeklyBalance())
+        //        {
+        //            Console.WriteLine("Congratulations on having a successful business! You've earned more than what you started with!");
+        //            Player.Wallet.CalculateBeginningBalance();
+        //            MainMenu.AskContinue();
+        //        }
+        //        if (Player.Wallet.DisplayMoney() == Player.Wallet.GetWeeklyBalance())
+        //        {
+        //            Console.WriteLine("You broke even on your investment as a lemonade stand owner! You did not win, but you also did not lose.");
+        //            Player.Wallet.CalculateBeginningBalance();
+        //            MainMenu.AskContinue();
+        //        }
+        //        if (Player.Wallet.DisplayMoney() < Player.Wallet.GetWeeklyBalance())
+        //        {
+        //            Console.WriteLine("Not good! You did not turn a profit! You have lost the game. You can always appeal by going another week.");
+        //            Player.Wallet.CalculateBeginningBalance();
+        //            MainMenu.AskContinue();
+        //        }
+        //    }
+        //    else
+        //    {
 
-            }
-        }
+        //    }
+        //}
         public void ChooseGameMode()
         {
             Console.WriteLine("What level of difficulty would you like to play at? (Enter a value from 1 through 3): ");

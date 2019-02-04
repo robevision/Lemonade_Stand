@@ -18,7 +18,7 @@ namespace LemonadeStand
         public Day()
         {
             weatherConditions = new WeatherConditions();
-            CheckWeatherConditions();
+            
         }
         public WeatherConditions WeatherConditions
         {

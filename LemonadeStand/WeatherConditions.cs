@@ -15,6 +15,7 @@ namespace LemonadeStand
         bool goodWeather;
         int outcome;
         string currentPrecipitation;
+        Day day;
         List<string> typeOfPrecipitation = new List<string>()
         {
             "snow", "hail", "rain","rain",
@@ -43,7 +44,7 @@ namespace LemonadeStand
             }
             else
             {
-                currentPrecipitation = "none";
+                currentPrecipitation = "no";
             }
         }
         public void HasBadWeather(int die)
@@ -92,8 +93,8 @@ namespace LemonadeStand
             HasPrecipitation(60);
             GetTemperature(outcome);
             GeneratePrecipitation();
-            Console.WriteLine(temperature);
-            Console.WriteLine(currentPrecipitation);
+            Console.WriteLine($"The temperature for {day} is {temperature} and there is {currentPrecipitation} precipitation.");
+            
             string textOfTemperature = Convert.ToString(temperature);
             List<string> dayForecastAnalysis = new List<string>()
             {
