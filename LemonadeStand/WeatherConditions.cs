@@ -23,6 +23,7 @@ namespace LemonadeStand
         public WeatherConditions()
         {
             random = new Random();
+            outcome = 0;
             HasBadWeather(6);
             HasGoodWeather(6);
             HasPrecipitation(6);
@@ -50,12 +51,12 @@ namespace LemonadeStand
             if(MainMenu.RollDie(0, die) < 4)
             {
                     outcome = 0;
-               bool badWeather = true;
+               badWeather = true;
                
             }
             else
             {
-               bool badWeather = false;
+               badWeather = false;
             }
             
         }
@@ -83,13 +84,12 @@ namespace LemonadeStand
             List<string> daySix = GrabDailyWeather();
             List<string> daySeven = GrabDailyWeather();
 
-
         }
         public List<string> GrabDailyWeather()
         {
             HasBadWeather(6);
             HasGoodWeather(6);
-            HasPrecipitation(6);
+            HasPrecipitation(60);
             GetTemperature(outcome);
             GeneratePrecipitation();
             Console.WriteLine(temperature);
@@ -103,7 +103,7 @@ namespace LemonadeStand
         }
         public void GetActualWeather()
         {
-
+            GetForecast();
         }
         public void GetTemperature(int outcome)
         {

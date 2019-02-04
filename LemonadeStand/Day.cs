@@ -7,6 +7,13 @@ namespace LemonadeStand
 {
     public class Day
     {
+        List<string> dayOne;
+        List<string> dayTwo;
+        List<string> dayThree;
+        List<string> dayFour;
+        List<string> dayFive;
+        List<string> daySix;
+        List<string> daySeven;
         WeatherConditions weatherConditions;
         public Day()
         {
@@ -34,9 +41,7 @@ namespace LemonadeStand
         }
         public void CheckWeatherConditions()
         {
-            WeatherConditions.HasBadWeather(6);
-            WeatherConditions.HasGoodWeather(6);
-            WeatherConditions.HasPrecipitation(6);
+            weatherConditions.GetForecast();
         }
     }
 }
