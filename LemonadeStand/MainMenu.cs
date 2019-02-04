@@ -82,7 +82,7 @@ namespace LemonadeStand
         }
         public static int RollDie(int min, int max)
         {
-            int result = random.Next(min, max);
+            int result = random.Next(min, max) + 1;
         
             return result;
         }

@@ -48,7 +48,7 @@ namespace LemonadeStand
             {
                 for (int i = 0; i < 7; i++)
                 {
-                    Console.WriteLine($"The sky is {daysOfWeek[i].weatherConditions.condition}, it is {daysOfWeek[i].weatherConditions.temperature}°F, with {daysOfWeek[i].weatherConditions.precipitation}.");
+                    Console.WriteLine($"The sky is {daysOfWeek[i].weatherConditions.condition}, it is {daysOfWeek[i].weatherConditions.temperature}°F, with {daysOfWeek[i].weatherConditions.precipitationAmount} {daysOfWeek[i].weatherConditions.precipitation}.");
                     System.Threading.Thread.Sleep(2000);
                 }
             }

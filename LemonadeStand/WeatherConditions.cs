@@ -18,6 +18,7 @@ namespace LemonadeStand
         bool isSunny;
         int outcome;
         string currentPrecipitation;
+        public string precipitationAmount;
         Day day;
         public List<string> typeOfPrecipitation = new List<string>()
         {
@@ -33,6 +34,7 @@ namespace LemonadeStand
             HasPrecipitation(15);
             GetTemperature(outcome);
             GeneratePrecipitation();
+            GeneratePrecipitationAmount(6);
             
 
         }
@@ -55,14 +57,14 @@ namespace LemonadeStand
         {
             if(MainMenu.RollDie(0, die) < 4)
             {
-                outcome = 0;
-                condition = "cloudy";
+               outcome = 0;
+               condition = "cloudy";
                isCloudy = true;
                
             }
             else
             {
-                condition = "sunny";
+               condition = "sunny";
                isCloudy = false;
             }
             
@@ -96,10 +98,7 @@ namespace LemonadeStand
         //    };
         //    return dayForecastAnalysis;
         //}
-        public void DisplayDailyWeather()
-        {
-            Console.WriteLine($"The temperature for {day} is {temperature} and there is {currentPrecipitation} precipitation.");
-        }
+        
 
         public void GetTemperature(int outcome)
         {
@@ -127,6 +126,25 @@ namespace LemonadeStand
                 precipitation = "no precipitation";
             }
                 
+        }
+        public void GeneratePrecipitationAmount(int die)
+        {
+            if(MainMenu.RollDie(0, die) <= die /2 && precipitationActivity == true)
+            {
+                precipitationAmount = "light";
+            }
+            else if (MainMenu.RollDie(0, die) >= die /2 && precipitationActivity == true)
+            {
+                precipitationAmount = "mild";
+            }
+            else if (MainMenu.RollDie(0, die) == die / 2 && precipitationActivity == true)
+            {
+                precipitationAmount = "heavy";
+            }
+            else if (MainMenu.RollDie(0, die) <= die && precipitationActivity == true)
+            {
+                precipitationAmount = "unknown";
+            }
         }
  
 
