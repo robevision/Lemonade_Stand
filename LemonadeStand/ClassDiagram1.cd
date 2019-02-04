@@ -10,7 +10,7 @@
   <Class Name="LemonadeStand.Game">
     <Position X="19.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAQABoCAAAAAAAAAAAAAAAAAAAAABAAAAAQIgAAA=</HashCode>
+      <HashCode>BAAggQAxICAAECEAAAAAEAAAAAAAAAABAAAAAQIAAAg=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -27,7 +27,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Player">
-    <Position X="19.75" Y="6.25" Width="1.5" />
+    <Position X="19.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAgAAAQAAAgEEIIAIAACAAAAAAAAAACgAAEAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -56,14 +56,14 @@
   <Class Name="LemonadeStand.WeatherConditions">
     <Position X="8.5" Y="5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAACAABAQgABAAIAAAAAQAAgAIABQCAAAAAAA=</HashCode>
+      <HashCode>AAcgAAAAgDAAIAAAABAEIAAAAAAAAAAaAAQCEAABAAA=</HashCode>
       <FileName>WeatherConditions.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.MainMenu">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAABQAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAABQAAAAAAAAAACAAAAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>MainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -77,12 +77,12 @@
   <Class Name="LemonadeStand.Day">
     <Position X="14.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAEIAAAAAAAAACAAAAAAAAAACAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAIAAAAAAAAACABAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="WeatherConditions" />
       <Property Name="Customer" />
+      <Property Name="WeatherConditions" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.MarketPlace">

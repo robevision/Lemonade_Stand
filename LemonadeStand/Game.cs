@@ -15,11 +15,15 @@ namespace LemonadeStand
         MarketPlace marketPlace;
         string playLength;
         int playLengthNumber;
+        int amountOfDays;
         Day day;
+        List<Day> daysOfWeek;
 
         public Game()
         {
+            daysOfWeek = new List<Day>();
             //timeFrame = new TimeFrame();
+            amountOfDays = 0;
             player = new Player();
             marketPlace = new MarketPlace();
         }
@@ -34,8 +38,21 @@ namespace LemonadeStand
             for (int index = 0; index < playLengthNumber; index++)
             {
                 day = new Day();
+                daysOfWeek.Add(day);
             }
-            
+            int dayTemperature = daysOfWeek[0].weatherConditions.temperature;
+        }
+        public void DisplayWeather()
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine(daysOfWeek[i].weatherConditions.temperature);
+            }
+        }
+
+        public void AddDays()
+        {
+            amountOfDays++;
         }
         //public bool CheckGameResult()
         //{

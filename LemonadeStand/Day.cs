@@ -7,26 +7,16 @@ namespace LemonadeStand
 {
     public class Day
     {
-        List<string> dayOne;
-        List<string> dayTwo;
-        List<string> dayThree;
-        List<string> dayFour;
-        List<string> dayFive;
-        List<string> daySix;
-        List<string> daySeven;
-        WeatherConditions weatherConditions;
+        List<string> weather;
+        public WeatherConditions weatherConditions;
+        Game game;
         public Day()
         {
             weatherConditions = new WeatherConditions();
-            
+            //weather = weatherConditions.GrabDailyWeather();
+            game.AddDays();
         }
-        public WeatherConditions WeatherConditions
-        {
-            get => default(LemonadeStand.WeatherConditions);
-            set
-            {
-            }
-        }
+       
 
         public Customer Customer
         {
@@ -35,13 +25,15 @@ namespace LemonadeStand
             {
             }
         }
-        public void SetHour()
+
+        public WeatherConditions WeatherConditions
         {
-        
+            get => default(WeatherConditions);
+            set
+            {
+            }
         }
-        public void CheckWeatherConditions()
-        {
-            weatherConditions.GetForecast();
-        }
+
+
     }
 }
