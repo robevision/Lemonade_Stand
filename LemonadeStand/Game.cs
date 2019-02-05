@@ -55,17 +55,25 @@ namespace LemonadeStand
                 return;
             }
         }
-       
+
+    
         public void RunGame()
         {
             MainMenu.ViewRules();
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
+            for (int i = 0; i < 7; i++)
+            {
+                daysOfWeek[i].weatherConditions.GetActualWeather();
+            }
+            
+            //daysOfWeek[0].weatherConditions.actualWeather;
+
             //this is going through each day with the forecast from each day. Not right in its current iteration.
             for (int i = 0; i < 7; i++)
             {
-               
+                
                 daysOfWeek[i].RunDay();
             }
            // customer.Buy(daysOfWeek[0].weatherConditions);

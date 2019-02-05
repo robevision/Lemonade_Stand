@@ -13,6 +13,7 @@ namespace LemonadeStand
         public bool badWeather;
         public bool terribleWeather;
         public int temperature;
+        public int actualWeather;
         public string condition;
         public string textOfTemperature;
         public string precipitation;
@@ -23,12 +24,12 @@ namespace LemonadeStand
         int outcome;
         string currentPrecipitation;
         public string precipitationAmount;
-        Day day;
+       
         public List<string> typeOfPrecipitation = new List<string>()
         {
             "snow", "snow","hail", "rain","rain"
         };
-        Game game;
+        
         public WeatherConditions()
         {
             random = new Random();
@@ -43,6 +44,21 @@ namespace LemonadeStand
 
 
 
+        }
+        public void GetActualWeather()
+        {
+            int temp;
+            int negativeWeatherModify = random.Next(0, 2);
+            int weatherModifyer = random.Next(0, 4);
+            if(negativeWeatherModify == 0)
+            {
+                temp = temperature - weatherModifyer;
+            }
+            else
+            {
+                temp = temperature + weatherModifyer;
+            }
+            actualWeather = temp;
         }
 
         public void CheckWeatherFavor()
@@ -190,6 +206,7 @@ namespace LemonadeStand
                 precipitationAmount = "unknown";
             }
         }
+
  
 
     }

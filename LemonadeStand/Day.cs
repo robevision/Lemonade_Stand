@@ -37,6 +37,7 @@ namespace LemonadeStand
 
             }
             Console.WriteLine($"You sold {listOfCustomers.Count} cups of lemonade for the day.");
+            DisplayAllOfTodaysCustomers();
             System.Threading.Thread.Sleep(2000);
         }
         public void RunDay()
@@ -49,10 +50,10 @@ namespace LemonadeStand
         }
         public void DisplayAllOfTodaysCustomers()
         {
-            //foreach (Customer customer in listOfCustomers)
-            //{
-            //    Console.WriteLine(customer.firstName +...);
-            //}
+            foreach (Customer customer in listOfCustomers)
+            {
+                Console.WriteLine($"{customer.firstName} {customer.lastName}");
+            }
         }
         public void GenerateCustomerAmount(WeatherConditions weather)
         {

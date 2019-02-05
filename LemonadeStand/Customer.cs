@@ -10,8 +10,8 @@ namespace LemonadeStand
         public bool disposition;
         public int purchase;
         private int money;
-        string firstName;
-        string lastName;
+        public string firstName;
+        public string lastName;
         string amount;
         private bool accessibility;
         int temperaturePreference;
