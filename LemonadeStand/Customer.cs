@@ -15,7 +15,7 @@ namespace LemonadeStand
         string amount;
         private bool accessibility;
         int temperaturePreference;
-        
+        Day day;
         Player player;
         Recipe recipe;
         private List<string> customer;
@@ -35,7 +35,8 @@ namespace LemonadeStand
             GetTemperaturePreference();
             GetName();
             GetMoneyAmount();
-            GetDisposition();
+            //GetAccessibility(weatherConditions);
+            //GetDisposition();
             //DisplayCustomer();
         }
         
@@ -80,9 +81,9 @@ namespace LemonadeStand
         {
             if (accessibility == true)
             {
-                if (money >= player.cupPrice)
+                if (money >= 5 /*player.cupPrice*/)
                 {
-                    if (player.cupPrice >= recipe.recipePrice)
+                    if (/*player.cupPrice*/5 >= 10.50/*recipe.recipePrice*/)
                     {
                         int chance = MainMenu.RollDie(0, 60);
                         if (chance == 1)
@@ -95,7 +96,7 @@ namespace LemonadeStand
                         }
                       
                     }
-                    if (player.cupPrice < recipe.recipePrice)
+                    if (/*player.cupPrice*/ 5 < 10.50/*recipe.recipePrice*/)
                     {
                         int chance = MainMenu.RollDie(0, 1);
                         if (chance == 1)
@@ -108,6 +109,10 @@ namespace LemonadeStand
                         }
                     }
                 }
+            }
+            else
+            {
+                disposition = false;
             }
            //if (amount >= cup price...
         }

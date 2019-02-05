@@ -8,20 +8,19 @@ namespace LemonadeStand
     public class Game
     {
         //HAS A
-        int gameMode;
+        //int gameMode;
         //TimeFrame timeFrame;
         Player player;
         MarketPlace marketPlace;
         string playLength;
         int playLengthNumber;
         int amountOfDays;
-        Day day;
-        Customer customer;
+        Day day; 
         List<Day> daysOfWeek;
 
         public Game()
         {
-            //daysOfWeek = new List<Day>();
+            daysOfWeek = new List<Day>();
             player = new Player();
             marketPlace = new MarketPlace();
             RunGame();
@@ -63,9 +62,11 @@ namespace LemonadeStand
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
-            for (int i = 0; i < playLengthNumber; i++)
+            //this is going through each day with the forecast from each day. Not right in its current iteration.
+            for (int i = 0; i < 7; i++)
             {
-                daysOfWeek[i].RunDay(/*List<Customer> listOfCustomers*/);
+               
+                daysOfWeek[i].RunDay();
             }
            // customer.Buy(daysOfWeek[0].weatherConditions);
         }

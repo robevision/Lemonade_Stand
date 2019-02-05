@@ -15,6 +15,7 @@ namespace LemonadeStand
         {
             weatherConditions = new WeatherConditions();
             GenerateCustomerAmount(weatherConditions);
+            listOfCustomers = new List<Customer>();
         }
         public void GetCustomers()
         {
@@ -24,16 +25,19 @@ namespace LemonadeStand
                 //if(game.listOfCustomers.disposition == true)
                 {
                    Customer customer = new Customer();
+                    customer.GetAccessibility(weatherConditions);
+                    customer.GetDisposition();
                    if(customer.disposition == true)
                     {
                         customer.Buy();
+                        listOfCustomers.Add(customer);
                     }
-                    listOfCustomers.Add(customer);
+                    
                 }
-                Console.WriteLine($"You sold {listOfCustomers.Count} cups of lemonade for the day.");
-                System.Threading.Thread.Sleep(2000);
 
             }
+            Console.WriteLine($"You sold {listOfCustomers.Count} cups of lemonade for the day.");
+            System.Threading.Thread.Sleep(2000);
         }
         public void RunDay()
         {
@@ -54,19 +58,23 @@ namespace LemonadeStand
         {
             if (weather.greatWeather == true)
             {
-                customerAmount = 6000;
+                customerAmount = 25;
             }
             if (weather.goodWeather == true)
             {
-                customerAmount = 1000;
+                customerAmount = 15;
             }
             if (weather.badWeather == true)
             {
-                customerAmount = 300;
+                customerAmount = 5;
             }
             if (weather.terribleWeather == true)
             {
-                customerAmount = 100;
+                customerAmount = 2;
+            }
+            else
+            {
+                customerAmount = 15;
             }
         }
         public Customer Customer

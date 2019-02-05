@@ -26,7 +26,7 @@ namespace LemonadeStand
         Day day;
         public List<string> typeOfPrecipitation = new List<string>()
         {
-            "snow", "hail", "rain","rain"
+            "snow", "snow","hail", "rain","rain"
         };
         Game game;
         public WeatherConditions()
@@ -151,17 +151,17 @@ namespace LemonadeStand
         {
             if (temperature < 32 && precipitationActivity == true)
             {
-                precipitation = typeOfPrecipitation[MainMenu.RollDie(0, 1)];
+                precipitation = typeOfPrecipitation[MainMenu.RollDie(0, 2)];
                 
             }
             else if (temperature == 32 && precipitationActivity == true)
             {
-                precipitation = typeOfPrecipitation[MainMenu.RollDie(0, 3)];
+                precipitation = typeOfPrecipitation[MainMenu.RollDie(0, 4)];
 
             }
             else if (temperature > 32 && precipitationActivity == true)
             {
-                precipitation = typeOfPrecipitation[MainMenu.RollDie(2, 3)];
+                precipitation = typeOfPrecipitation[MainMenu.RollDie(3, 4)];
             }
             else
             {
