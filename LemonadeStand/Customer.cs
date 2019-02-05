@@ -15,10 +15,10 @@ namespace LemonadeStand
         string amount;
         private bool accessibility;
         int temperaturePreference;
-        public int customerAmount;
+        
         Player player;
         Recipe recipe;
-        private List<string> customer;
+        private List<Customer> customer;
         public List<Customer> listOfCustomers;
         private List<string> firstNames = new List<string>()
         {
@@ -35,27 +35,10 @@ namespace LemonadeStand
             GetName();
             GetMoneyAmount();
             GetDisposition();
+            //listOfCustomers.Add(customer);
             //DisplayCustomer();
         }
-        public void GenerateCustomerAmount(WeatherConditions weather)
-        {
-            if(weather.greatWeather == true)
-            {
-                customerAmount = 6000;
-            }
-            if(weather.goodWeather == true)
-            {
-                customerAmount = 1000;
-            }
-            if(weather.badWeather== true)
-            {
-                customerAmount = 300;
-            }
-            if(weather.terribleWeather== true)
-            {
-                customerAmount = 100;
-            }
-        }
+        
         public void GetTemperaturePreference()
         {
             if (MainMenu.RollDie(0, 50) > 1)

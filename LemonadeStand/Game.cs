@@ -19,7 +19,6 @@ namespace LemonadeStand
         Day day;
         Customer customer;
         List<Day> daysOfWeek;
-        public List<Customer> listOfCustomers;
 
         public Game()
         {
@@ -57,18 +56,13 @@ namespace LemonadeStand
                 return;
             }
         }
+       
         public void RunGame()
         {
             MainMenu.ViewRules();
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
-            for (int i = 0; i < customer.customerAmount; i++)
-            {
-                customer = new Customer();
-                listOfCustomers.Add(customer);
-                Console.WriteLine(listOfCustomers);
-            }
             for (int i = 0; i < playLengthNumber; i++)
             {
                 daysOfWeek[i].RunDay(/*List<Customer> listOfCustomers*/);
