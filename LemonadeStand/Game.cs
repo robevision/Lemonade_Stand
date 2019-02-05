@@ -41,8 +41,6 @@ namespace LemonadeStand
                 day = new Day();
                 daysOfWeek.Add(day);
             }
-            //daysOfWeek[0]
-            //int dayTemperature = daysOfWeek[0].weatherConditions.temperature;
         }
         public void DisplayWeeklyWeather()
         {

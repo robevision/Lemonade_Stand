@@ -8,6 +8,10 @@ namespace LemonadeStand
     public class WeatherConditions
     {
         Random random;
+        public bool greatWeather;
+        public bool goodWeather;
+        public bool badWeather;
+        public bool terribleWeather;
         public int temperature;
         public string condition;
         public string textOfTemperature;
@@ -39,6 +43,44 @@ namespace LemonadeStand
 
         }
 
+        public void CheckWeatherFavor()
+        {
+            if (temperature >= 60 && isSunny == true)
+            {
+                greatWeather = true;
+                goodWeather = false;
+                badWeather = false;
+                terribleWeather = false;
+            }
+            else if (temperature >= 55 && isCloudy == true && isSunny == false && precipitationActivity == false)
+            {
+                greatWeather = false;
+                goodWeather = true;
+                badWeather = false;
+                terribleWeather = false;
+            }
+            else if (temperature < 55 && isCloudy == true && isSunny == false)
+            {
+                greatWeather = false;
+                goodWeather = false;
+                badWeather = true;
+                terribleWeather = false;
+            }
+            else if (temperature < 55 && isCloudy == true && isSunny == false && precipitationAmount == "heavy")
+            {
+                greatWeather = false;
+                goodWeather = false;
+                badWeather = false;
+                terribleWeather = true;
+            }
+            else
+            {
+                greatWeather = false;
+                goodWeather = true;
+                badWeather = false;
+                terribleWeather = true;
+            }
+        }
         public void HasPrecipitation(int die)
         {
             if (isCloudy == true)
