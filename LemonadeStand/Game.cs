@@ -67,6 +67,11 @@ namespace LemonadeStand
             DisplayWeeklyWeather();
             customer = new Customer();
             listOfCustomers.Add(customer);
+            for (int i = 0; i < playLengthNumber; i++)
+            {
+                daysOfWeek[i].RunDay();
+            }
+           // customer.Buy(daysOfWeek[0].weatherConditions);
         }
         public void DisplayDailyWeather()
         {

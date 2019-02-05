@@ -37,7 +37,7 @@ namespace LemonadeStand
         {
             if (MainMenu.RollDie(0, 50) > 1)
             {
-             temperaturePreference = (MainMenu.RollDie(60,100))
+                temperaturePreference = (MainMenu.RollDie(60, 100));
             }
             else
             {
@@ -45,6 +45,20 @@ namespace LemonadeStand
             }
             
         }
+        public void GetAccessibility(WeatherConditions weather)
+        {
+
+            if (temperaturePreference >= weather.temperature)
+            {
+                accessibility = true;
+            }
+            else
+            {
+                accessibility = false;
+            }
+           
+        }
+        
         public void GetName()
         {
           firstName = (firstNames[MainMenu.RollDie(0, 20)]);
@@ -58,6 +72,10 @@ namespace LemonadeStand
         }
         public void GetDisposition()
         {
+            if (accessibility == true)
+            {
+
+            }
            //if (amount >= cup price...
         }
         public void DisplayCustomer()

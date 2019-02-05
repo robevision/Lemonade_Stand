@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LemonadeStand.Customer">
-    <Position X="13.75" Y="6" Width="1.5" />
+    <Position X="11" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABABABAABAIAAAAAAAAAAAAAQAihAAAABACAAAFAA=</HashCode>
+      <HashCode>AAIBADABAABAIAAAAAgAAAAAAAQAiBAAAABACAAAFAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Game">
     <Position X="19" Y="2.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAQARoCAAECEAAAAAEAAACAAAAAgBAIQAAQIAAAg=</HashCode>
+      <HashCode>AAAgAQARoCAAECEAAAAAEAAACAQAAAgBAIQAAQIAAAg=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -27,7 +27,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Player">
-    <Position X="19.75" Y="11" Width="1.5" />
+    <Position X="21.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAgAAAQAAAgEEIIAIAACAAAAAAAAAACgAAEAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -93,14 +93,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Wallet">
-    <Position X="16.5" Y="7.5" Width="2.5" />
+    <Position X="20" Y="8" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAQQAAAAAAAAAAAAAAAEAAAAAAAASAAAAAAAAAAAEAA=</HashCode>
       <FileName>Wallet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Inventory">
-    <Position X="22.75" Y="8.25" Width="1.5" />
+    <Position X="24.5" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Inventory.cs</FileName>
