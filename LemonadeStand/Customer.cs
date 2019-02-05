@@ -42,9 +42,9 @@ namespace LemonadeStand
         
         public void GetTemperaturePreference()
         {
-            if (MainMenu.RollDie(0, 50) > 1)
+            if (MainMenu.RollDie(1, 50) > 1)
             {
-                temperaturePreference = (MainMenu.RollDie(60, 100));
+                temperaturePreference = (MainMenu.RollDie(40, 60));
             }
             else
             {
@@ -55,7 +55,7 @@ namespace LemonadeStand
         public void GetAccessibility(WeatherConditions weather)
         {
 
-            if (temperaturePreference >= weather.temperature)
+            if (temperaturePreference <= weather.temperature)
             {
                 accessibility = true;
             }
@@ -83,7 +83,7 @@ namespace LemonadeStand
             {
                 if (money >= 5 /*player.cupPrice*/)
                 {
-                    if (/*player.cupPrice*/5 >= 10.50/*recipe.recipePrice*/)
+                    if (/*player.cupPrice*/ 5 >= 10.50/*recipe.recipePrice*/)
                     {
                         int chance = MainMenu.RollDie(0, 60);
                         if (chance == 1)

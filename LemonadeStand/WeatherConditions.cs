@@ -39,34 +39,36 @@ namespace LemonadeStand
             GetTemperature(outcome);
             GeneratePrecipitation();
             GeneratePrecipitationAmount(6);
-            
+            CheckWeatherFavor();
+
+
 
         }
 
         public void CheckWeatherFavor()
         {
-            if (temperature >= 60 && isSunny == true)
+            if (temperature >= 60 /*&& isSunny == true*/)
             {
                 greatWeather = true;
                 goodWeather = false;
                 badWeather = false;
                 terribleWeather = false;
             }
-            else if (temperature >= 55 && isCloudy == true && isSunny == false && precipitationActivity == false)
+            else if (temperature >= 55 /*&& isCloudy == true && isSunny == false && precipitationActivity == false*/)
             {
                 greatWeather = false;
                 goodWeather = true;
                 badWeather = false;
                 terribleWeather = false;
             }
-            else if (temperature < 55 && isCloudy == true && isSunny == false)
+            else if (temperature < 55 /*&& isCloudy == true && isSunny == false*/)
             {
                 greatWeather = false;
                 goodWeather = false;
                 badWeather = true;
                 terribleWeather = false;
             }
-            else if (temperature < 55 && isCloudy == true && isSunny == false && precipitationAmount == "heavy")
+            else if (temperature < 55 && isCloudy == true /*&& isSunny == false*/ && precipitationAmount == "heavy")
             {
                 greatWeather = false;
                 goodWeather = false;
@@ -78,7 +80,7 @@ namespace LemonadeStand
                 greatWeather = false;
                 goodWeather = true;
                 badWeather = false;
-                terribleWeather = true;
+                terribleWeather = false;
             }
         }
         public void HasPrecipitation(int die)
