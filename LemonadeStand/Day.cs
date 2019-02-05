@@ -9,13 +9,23 @@ namespace LemonadeStand
     {
     
         public WeatherConditions weatherConditions;
+        public Customer customer;
+        public Game game;
         public Day()
         {
             weatherConditions = new WeatherConditions();
         }
-        public void RunDay()
+        public void RunDay(/*List<Customer> customer*/)
         {
+            int listOfCustomersTotal=Convert.ToInt32(game.listOfCustomers);
+            for (int i = 0; i < listOfCustomersTotal; i++)
+            {
+                //if(game.listOfCustomers.disposition == true)
+                {
+                    customer.Buy();
+                }
 
+            }
         }
 
         public Customer Customer

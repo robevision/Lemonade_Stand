@@ -83,7 +83,7 @@ namespace LemonadeStand
         public static int RollDie(int min, int max)
         {
             int result = random.Next(min, max) + 1;
-        
+            System.Threading.Thread.Sleep(100);
             return result;
         }
         //public static int GetGameModeDie()

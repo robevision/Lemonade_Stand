@@ -10,6 +10,7 @@ namespace LemonadeStand
         private int score;
         private int money;
         public string playerName;
+        public double cupPrice = 2.50;
         Wallet wallet;
         public Player()
         {

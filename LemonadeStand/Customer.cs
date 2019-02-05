@@ -8,6 +8,7 @@ namespace LemonadeStand
     public class Customer
     {
         private bool disposition;
+        public int purchase;
         private int money;
         string firstName;
         string lastName;
@@ -15,8 +16,10 @@ namespace LemonadeStand
         private bool accessibility;
         int temperaturePreference;
         public int customerAmount;
+        Player player;
+        Recipe recipe;
         private List<string> customer;
-        private List<Customer> listOfCustomers;
+        public List<Customer> listOfCustomers;
         private List<string> firstNames = new List<string>()
         {
             "Billy", "Jose", "Geraldo","Bob", "Frank","Edgar","Molly", "Meredith", "Adam", "Larry", "George", "Sally","Susan","Marquise","Calvin","Mike","Maggie", "Margaret", "Elizabeth","John","Matt"
@@ -27,11 +30,12 @@ namespace LemonadeStand
         };
         public Customer()
         {
+            disposition = true;
             GetTemperaturePreference();
             GetName();
             GetMoneyAmount();
             GetDisposition();
-            DisplayCustomer();
+            //DisplayCustomer();
         }
         public void GenerateCustomerAmount(WeatherConditions weather)
         {
@@ -93,13 +97,44 @@ namespace LemonadeStand
         {
             if (accessibility == true)
             {
-
+                if (money >= player.cupPrice)
+                {
+                    if (player.cupPrice >= recipe.recipePrice)
+                    {
+                        int chance = MainMenu.RollDie(0, 60);
+                        if (chance == 1)
+                        {
+                            disposition = true;
+                        }
+                        else
+                        {
+                            disposition = false;
+                        }
+                      
+                    }
+                    if (player.cupPrice < recipe.recipePrice)
+                    {
+                        int chance = MainMenu.RollDie(0, 1);
+                        if (chance == 1)
+                        {
+                            disposition = true;
+                        }
+                        else
+                        {
+                            disposition = false;
+                        }
+                    }
+                }
             }
            //if (amount >= cup price...
         }
         public void DisplayCustomer()
         {
-            Console.WriteLine($"{firstName} {lastName} {amount}");
+            Console.WriteLine($"{firstName} {lastName} with ${amount}");
+        }
+        public void Buy()
+        {
+            purchase++;
         }
     }
 

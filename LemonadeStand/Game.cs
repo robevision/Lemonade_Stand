@@ -19,7 +19,7 @@ namespace LemonadeStand
         Day day;
         Customer customer;
         List<Day> daysOfWeek;
-        List<Customer> listOfCustomers;
+        public List<Customer> listOfCustomers;
 
         public Game()
         {
@@ -63,11 +63,15 @@ namespace LemonadeStand
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
-            customer = new Customer();
-            listOfCustomers.Add(customer);
+            for (int i = 0; i < customer.customerAmount; i++)
+            {
+                customer = new Customer();
+                listOfCustomers.Add(customer);
+                Console.WriteLine(listOfCustomers);
+            }
             for (int i = 0; i < playLengthNumber; i++)
             {
-                daysOfWeek[i].RunDay();
+                daysOfWeek[i].RunDay(/*List<Customer> listOfCustomers*/);
             }
            // customer.Buy(daysOfWeek[0].weatherConditions);
         }

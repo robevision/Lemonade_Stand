@@ -10,6 +10,7 @@ namespace LemonadeStand
         private int ice;
         private int lemon;
         private int sugar;
+        public double recipePrice = 10.50; 
 
     
     }
