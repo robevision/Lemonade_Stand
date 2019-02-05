@@ -7,5 +7,7 @@ namespace LemonadeStand
 {
     public class MarketPlace
     {
+
+        //have prices
     }
 }

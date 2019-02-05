@@ -10,35 +10,45 @@ namespace LemonadeStand
         public List<Customer> listOfCustomers;
         public int customerAmount;
         public WeatherConditions weatherConditions;
-        public Customer customer;
         public Game game;
         public Day()
         {
             weatherConditions = new WeatherConditions();
             GenerateCustomerAmount(weatherConditions);
         }
-        public void RunDay(/*List<Customer> customer*/)
+        public void GetCustomers()
         {
-            int listOfCustomersTotal=Convert.ToInt32(listOfCustomers);
-            for (int i = 0; i < listOfCustomersTotal; i++)
+            
+            for (int i = 0; i < customerAmount; i++)
             {
                 //if(game.listOfCustomers.disposition == true)
                 {
-                    customer.Buy();
-                    Console.WriteLine($"You sold {customer.purchase} cups of lemonade for the day.");
-                    System.Threading.Thread.Sleep(2000);
+                   Customer customer = new Customer();
+                   if(customer.disposition == true)
+                    {
+                        customer.Buy();
+                    }
+                    listOfCustomers.Add(customer);
                 }
+                Console.WriteLine($"You sold {listOfCustomers.Count} cups of lemonade for the day.");
+                System.Threading.Thread.Sleep(2000);
 
             }
         }
+        public void RunDay()
+        {
+            //DisplayWeather();
+            //GoToMarketPlace();
+            //MakeLemonade();
+            GetCustomers();
+            //GetIncome();
+        }
         public void DisplayAllOfTodaysCustomers()
         {
-            for (int i = 0; i < customerAmount; i++)
-            {
-                customer = new Customer();
-                listOfCustomers.Add(customer);
-                Console.WriteLine(listOfCustomers);
-            }
+            //foreach (Customer customer in listOfCustomers)
+            //{
+            //    Console.WriteLine(customer.firstName +...);
+            //}
         }
         public void GenerateCustomerAmount(WeatherConditions weather)
         {

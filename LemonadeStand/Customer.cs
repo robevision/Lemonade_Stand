@@ -7,7 +7,7 @@ namespace LemonadeStand
 {
     public class Customer
     {
-        private bool disposition;
+        public bool disposition;
         public int purchase;
         private int money;
         string firstName;
@@ -18,7 +18,7 @@ namespace LemonadeStand
         
         Player player;
         Recipe recipe;
-        private List<Customer> customer;
+        private List<string> customer;
         public List<Customer> listOfCustomers;
         private List<string> firstNames = new List<string>()
         {
@@ -30,12 +30,12 @@ namespace LemonadeStand
         };
         public Customer()
         {
+            purchase = 0;
             disposition = true;
             GetTemperaturePreference();
             GetName();
             GetMoneyAmount();
             GetDisposition();
-            //listOfCustomers.Add(customer);
             //DisplayCustomer();
         }
         

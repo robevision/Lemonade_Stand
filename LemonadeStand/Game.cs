@@ -9,8 +9,7 @@ namespace LemonadeStand
     {
         //HAS A
         int gameMode;
-        int die;
-        TimeFrame timeFrame;
+        //TimeFrame timeFrame;
         Player player;
         MarketPlace marketPlace;
         string playLength;
@@ -22,20 +21,21 @@ namespace LemonadeStand
 
         public Game()
         {
-            daysOfWeek = new List<Day>();
+            //daysOfWeek = new List<Day>();
             player = new Player();
             marketPlace = new MarketPlace();
             RunGame();
         }
+        //merge two methods for simplification
       public void GetPlayLength()
         {
             Console.WriteLine("How many days would you like to play for?");
             playLength = Console.ReadLine();
             playLengthNumber = Convert.ToInt32(playLength);
         }
-       public void ConvertToDays()
+        public void ConvertToDays()
         {
-            for (int index = 0; index < playLengthNumber; index++)
+            for (int i = 0; i < playLengthNumber; i++)
             {
                 day = new Day();
                 daysOfWeek.Add(day);
