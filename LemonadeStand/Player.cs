@@ -11,15 +11,24 @@ namespace LemonadeStand
         private int money;
         public string playerName;
         public double cupPrice = 2.50;
-       public Wallet wallet;
+        public Wallet wallet;
+        public Inventory inventory;
         public Player()
         {
             wallet = new Wallet();
             CheckWallet();
+            inventory = new Inventory();
 
         }
-        public Recipe recipe = new Recipe();
-   
+        public void PickAmountOfRecipes()
+        {
+            Console.WriteLine();
+            inventory.lemonade.Add(inventory.sugar);
+            inventory.lemonade.Add(inventory.lemon);
+            inventory.lemonade.Add(inventory.water);
+            inventory.lemonade.Add(inventory.ice);
+        }
+
 
         public Inventory Inventory
         {

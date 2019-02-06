@@ -8,17 +8,21 @@ namespace LemonadeStand
     public class Recipe
     {
         public double recipePrice = 10.50;
-        public void GetPitcher()
+        public Recipe(Player player)
         {
-            CreateGenericRecipe();
+            MakePitcher(player);
         }
-        public void CreateGenericRecipe()
+        public void MakePitcher(Player player)
         {
-           
+            CreateGenericRecipe(player);
         }
-        public void CreateSpecialtyRecipe()
+        public void CreateGenericRecipe(Player player)
         {
+            player.Inventory.pitcher++;
+        }
+        //public void CreateSpecialtyRecipe()
+        //{
 
-        }
+        //}
     }
 }

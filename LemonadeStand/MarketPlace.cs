@@ -115,7 +115,6 @@ namespace LemonadeStand
                         {
                             ice.amount += iceAmount;
                            double iceBuy= player.wallet.money -= projectedAmount;
-
                             int iceAdd=ice.amount + iceAmount;
                             Console.WriteLine($"You purchased {iceAmount} cups of ice at ${ice.price} a cup.");
                             Console.WriteLine($"You now have ${iceBuy} in your wallet.");
@@ -133,7 +132,7 @@ namespace LemonadeStand
             }
             
         }
-        //get iceBuy to subtract from actual amount in wallet
+        
         public void BuyLemon(Player player)
         {
             Console.WriteLine($"The price of a lemon is ${lemon.price}.");
@@ -251,7 +250,7 @@ namespace LemonadeStand
                     string waterTextAmount = Console.ReadLine();
                     try
                     {
-                        sugarAmount = Convert.ToInt32(waterTextAmount);
+                        waterAmount = Convert.ToInt32(waterTextAmount);
                     }
                     catch
                     {
@@ -288,6 +287,7 @@ namespace LemonadeStand
                     BuyWater(player);
                     break;
             }
+            player.Inventory.GrabIngredientsFromStore(ice.amount, lemon.amount, sugar.amount, water.amount);
         }
         public void EvaluateMarketPrices()
         {
@@ -332,8 +332,8 @@ namespace LemonadeStand
         //}
         //public int GiveCurrentLemonAmount()
         //{
-        //    int lemonTally=lemon.amount;
-           
+        //    int lemonTally = lemon.amount;
+
         //    return lemonTally;
 
         //}
@@ -341,13 +341,13 @@ namespace LemonadeStand
         //{
         //    int iceTally = ice.amount;
         //    return iceTally;
-           
+
         //}
         //public int GiveCurrentWaterAmount()
         //{
         //    int waterTally = water.amount;
         //    return waterTally;
-           
+
         //}
         //public int GiveCurrentSugarAmount()
         //{

@@ -44,7 +44,8 @@ namespace LemonadeStand
         {
             DisplayDayWeather();
             marketPlace.DecideToShop(player);
-            //MakeLemonade();
+            player.Recipe.CreateGenericRecipe(player);
+            //MakePitcher();
             GetCustomers();
             //GetIncome();
         }
