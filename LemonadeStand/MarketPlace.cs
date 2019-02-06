@@ -233,18 +233,26 @@ namespace LemonadeStand
             Console.WriteLine($"Water is ${water.price}.");
             PopulateProjectedPrices();
             Console.WriteLine("Would you like to get water?");
-            string getWaterResult = Console.ReadLine().ToLower();
-            switch (getWaterResult)
+            string getSugarResult = Console.ReadLine().ToLower();
+            switch (getSugarResult)
             {
                 case "yes":
                     Console.WriteLine("How much water would you like?");
-                    string waterTextAmount = Console.ReadLine().ToLower();
-                    int waterAmount = Convert.ToInt32(waterTextAmount);
+                    string waterTextAmount = Console.ReadLine();
+                    try
+                    {
+                        sugarAmount = Convert.ToInt32(waterTextAmount);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Please type a numeric value from 1 or higher.");
+                        BuyWater(player);
+                    }
 
                     if (waterAmount >= 1)
                     {
-                       
-                       water.predictedAmount = Convert.ToInt32(waterAmount);
+
+                        water.predictedAmount = waterAmount;
                         double projectedAmount = water.predictedPrice * water.predictedAmount;
                         if (projectedAmount > player.wallet.money)
                         {
@@ -253,8 +261,10 @@ namespace LemonadeStand
                         }
                         else
                         {
-                            Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuyWater(player);
+
+                            double waterBuy = (player.wallet.money - projectedAmount);
+                            int waterAdd = water.amount + waterAmount;
+
                         }
                     }
 
@@ -266,11 +276,6 @@ namespace LemonadeStand
                     BuyWater(player);
                     break;
             }
-            if (player.wallet.money >= water.price)
-            {
-                water.amount++;
-            }
-
         }
         public void EvaluateMarketPrices()
         {
