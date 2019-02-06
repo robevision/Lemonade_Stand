@@ -10,6 +10,7 @@ namespace LemonadeStand
         public List<Customer> listOfCustomers;
         public int customerAmount;
         public WeatherConditions weatherConditions;
+        int lemonadeSales;
         
         public Day()
         {
@@ -35,20 +36,23 @@ namespace LemonadeStand
                         {
                             for (int index = 0; index < listOfCustomers.Count; index++)
                             {
-                             index -= player.inventory.pitcher;
+                              lemonadeSales = player.inventory.pitcher -= listOfCustomers[index].purchase; 
                             }
                             break;
                         }
                         else
                         {
-
+                            lemonadeSales = listOfCustomers.Count;
+                            player.inventory.pitcher -= listOfCustomers.Count;
                         }
                     }
                     
                 }
 
             }
-            Console.WriteLine($"You sold {listOfCustomers.Count} cups of lemonade for the day.");
+            Console.WriteLine($"You sold {lemonadeSales} cups of lemonade for the day.");
+            player.wallet.money += (lemonadeSales * player.cupPrice);
+
             DisplayAllOfTodaysCustomers();
             System.Threading.Thread.Sleep(2000);
         }
