@@ -78,6 +78,7 @@ namespace LemonadeStand
         }
         public void DisplayAllOfTodaysCustomers()
         {
+            Console.WriteLine("These are the names of all your potential customers.");
             foreach (Customer customer in listOfCustomers)
             {
                 Console.WriteLine($"{customer.firstName} {customer.lastName}");

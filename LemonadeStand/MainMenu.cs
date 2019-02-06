@@ -65,6 +65,10 @@ namespace LemonadeStand
                     break;
             }
         }
+        public static void ConsoleWelcome()
+        {
+            Console.WriteLine("Welcome to Lemonade Stand, where you try to build a successful lemonade stand business!");
+        }
         public static void AskPlayAgain()
         {
             Console.WriteLine("You made quite an effort with that lemonade stand business!");
