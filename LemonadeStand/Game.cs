@@ -11,7 +11,7 @@ namespace LemonadeStand
         //int gameMode;
         //TimeFrame timeFrame;
         Player player;
-        MarketPlace marketPlace;
+        public MarketPlace marketPlace;
         string playLength;
         int playLengthNumber;
         int amountOfDays;
@@ -74,7 +74,7 @@ namespace LemonadeStand
             for (int i = 0; i < 7; i++)
             {
                 
-                daysOfWeek[i].RunDay();
+                daysOfWeek[i].RunDay(marketPlace, player);
             }
            // customer.Buy(daysOfWeek[0].weatherConditions);
         }

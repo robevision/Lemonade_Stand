@@ -10,7 +10,7 @@ namespace LemonadeStand
         public List<Customer> listOfCustomers;
         public int customerAmount;
         public WeatherConditions weatherConditions;
-        public Game game;
+        
         public Day()
         {
             weatherConditions = new WeatherConditions();
@@ -40,10 +40,10 @@ namespace LemonadeStand
             DisplayAllOfTodaysCustomers();
             System.Threading.Thread.Sleep(2000);
         }
-        public void RunDay()
+        public void RunDay(MarketPlace marketPlace, Player player)
         {
             DisplayDayWeather();
-            //GoToMarketPlace();
+            marketPlace.DecideToShop(player);
             //MakeLemonade();
             GetCustomers();
             //GetIncome();

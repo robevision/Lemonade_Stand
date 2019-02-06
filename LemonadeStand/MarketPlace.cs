@@ -11,7 +11,6 @@ namespace LemonadeStand
         Water water;
         Sugar sugar;
         Ice ice;
-        Wallet wallet;
         
         public MarketPlace()
         {
@@ -20,6 +19,7 @@ namespace LemonadeStand
         //have prices
         public void GenerateIcePrice()
         {
+            ice = new Ice();
            int result = MainMenu.RollDie(0, 10);
             if (result >= 5)
             {
@@ -32,6 +32,7 @@ namespace LemonadeStand
         }
         public void GenerateLemonPrice()
         {
+            lemon = new Lemon();
             int result = MainMenu.RollDie(0, 10);
             if (result >= 5)
             {
@@ -44,6 +45,7 @@ namespace LemonadeStand
         }
         public void GenerateWaterPrice()
         {
+            water = new Water();
             int result = MainMenu.RollDie(0, 10);
             if (result >= 5)
             {
@@ -56,6 +58,7 @@ namespace LemonadeStand
         }
         public void GenerateSugarPrice()
         {
+            sugar = new Sugar();
             int result = MainMenu.RollDie(0, 10);
             if (result >= 5)
             {
@@ -73,7 +76,7 @@ namespace LemonadeStand
             water.predictedPrice = water.price;
             sugar.predictedPrice = sugar.price;
         }
-        public void BuyIce()
+        public void BuyIce(Player player)
         {
             Console.WriteLine($"The price of ice is ${ice.price}.");
             PopulateProjectedPrices();
@@ -88,18 +91,18 @@ namespace LemonadeStand
                     
                     if (iceAmount >= 1)
                     { 
-                        wallet = new Wallet();
+                        
                         ice.predictedAmount = Convert.ToInt32(iceAmount);
                      double projectedAmount = ice.predictedPrice * ice.predictedAmount;
-                        if(projectedAmount > wallet.money)
+                        if(projectedAmount > player.Wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
-                            BuyIce();
+                            BuyIce(player);
                         }
                         else
                         {
                             Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuyIce();
+                            BuyIce(player);
                         }
                     }
 
@@ -108,16 +111,16 @@ namespace LemonadeStand
                     break;
                 default:
                     Console.WriteLine("Please type 'yes' or 'no'");
-                    BuyIce();
+                    BuyIce(player);
                     break;
             }
-            if (wallet.money >= ice.price)
+            if (player.Wallet.money >= ice.price)
             {
                 ice.amount++;
             }
             
         }
-        public void BuyLemon()
+        public void BuyLemon(Player player)
         {
             Console.WriteLine($"The price of a lemon is ${lemon.price}.");
             PopulateProjectedPrices();
@@ -132,18 +135,18 @@ namespace LemonadeStand
 
                     if (lemonAmount >= 1)
                     {
-                        wallet = new Wallet();
+                        
                         lemon.predictedAmount = Convert.ToInt32(lemonAmount);
                         double projectedAmount = lemon.predictedPrice * lemon.predictedAmount;
-                        if (projectedAmount > wallet.money)
+                        if (projectedAmount > player.Wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
-                            BuyLemon();
+                            BuyLemon(player);
                         }
                         else
                         {
                             Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuyLemon();
+                            BuyLemon(player);
                         }
                     }
 
@@ -152,18 +155,18 @@ namespace LemonadeStand
                     break;
                 default:
                     Console.WriteLine("Please type 'yes' or 'no'");
-                    BuyLemon();
+                    BuyLemon(player);
                     break;
             }
-            if (wallet.money >= lemon.price)
+            if (player.Wallet.money >= lemon.price)
             {
                 lemon.amount++;
             }
 
         }
-        public void BuySugar()
+        public void BuySugar(Player player)
         {
-            Console.WriteLine($"The price of sugar is ${sugar.price}.");
+            Console.WriteLine($"The price of a cup of sugar is ${sugar.price}.");
             PopulateProjectedPrices();
             Console.WriteLine("Would you like to buy sugar?");
             string getSugarResult = Console.ReadLine().ToLower();
@@ -176,18 +179,18 @@ namespace LemonadeStand
 
                     if (sugarAmount >= 1)
                     {
-                        wallet = new Wallet();
+                       
                         sugar.predictedAmount = Convert.ToInt32(sugarAmount);
                         double projectedAmount = sugar.predictedPrice * sugar.predictedAmount;
-                        if (projectedAmount > wallet.money)
+                        if (projectedAmount > player.Wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
-                            BuySugar();
+                            BuySugar(player);
                         }
                         else
                         {
                             Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuySugar();
+                            BuySugar(player);
                         }
                     }
 
@@ -196,16 +199,16 @@ namespace LemonadeStand
                     break;
                 default:
                     Console.WriteLine("Please type 'yes' or 'no'");
-                    BuySugar();
+                    BuySugar(player);
                     break;
             }
-            if (wallet.money >= sugar.price)
+            if (player.Wallet.money >= sugar.price)
             {
                 sugar.amount++;
             }
 
         }
-        public void BuyWater()
+        public void BuyWater(Player player)
         {
             Console.WriteLine($"Water is ${water.price}.");
             PopulateProjectedPrices();
@@ -220,18 +223,18 @@ namespace LemonadeStand
 
                     if (waterAmount >= 1)
                     {
-                        wallet = new Wallet();
+                       
                        water.predictedAmount = Convert.ToInt32(waterAmount);
                         double projectedAmount = water.predictedPrice * water.predictedAmount;
-                        if (projectedAmount > wallet.money)
+                        if (projectedAmount > player.Wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
-                            BuyWater();
+                            BuyWater(player);
                         }
                         else
                         {
                             Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuyWater();
+                            BuyWater(player);
                         }
                     }
 
@@ -240,10 +243,10 @@ namespace LemonadeStand
                     break;
                 default:
                     Console.WriteLine("Please type 'yes' or 'no'");
-                    BuyWater();
+                    BuyWater(player);
                     break;
             }
-            if (wallet.money >= water.price)
+            if (player.Wallet.money >= water.price)
             {
                 water.amount++;
             }
@@ -257,9 +260,31 @@ namespace LemonadeStand
             GenerateWaterPrice();
             Console.WriteLine($"A cup of sugar costs${sugar.price}, half a bag of ice costs ${ice.price}, a lemon costs ${lemon.price}, and water is {water.price}.");
         }
-        public void PurchaseIngredients()
+        public void DecideToShop(Player player)
         {
-
+            Console.WriteLine("Would you like to purchase ingredients for your lemonade?");
+            string shopDecision = Console.ReadLine().ToLower();
+            switch (shopDecision)
+            {
+                case "yes":
+                PurchaseIngredients(player);
+                    break;
+                case "no":
+                    break;
+                default:
+                    Console.WriteLine("Please type 'yes' or 'no'");
+                    DecideToShop(player);
+                    break;
+            }
+           
+        }
+        public void PurchaseIngredients(Player player)
+        {
+            EvaluateMarketPrices();
+            BuyIce(player);
+            BuyLemon(player);
+            BuySugar(player);
+            BuyWater(player);
         }
     }
 }
