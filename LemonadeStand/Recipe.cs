@@ -14,7 +14,7 @@ namespace LemonadeStand
         }
         public void CreateGenericRecipe()
         {
-            
+           
         }
         public void CreateSpecialtyRecipe()
         {

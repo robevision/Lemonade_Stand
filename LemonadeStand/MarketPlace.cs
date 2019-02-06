@@ -113,7 +113,7 @@ namespace LemonadeStand
                         }
                         else
                         {
-                            
+                            ice.amount += iceAmount;
                            double iceBuy= player.wallet.money -= projectedAmount;
 
                             int iceAdd=ice.amount + iceAmount;
@@ -167,7 +167,7 @@ namespace LemonadeStand
                         }
                         else
                         {
-
+                            lemon.amount += lemonAmount;
                             double lemonBuy = player.wallet.money -= projectedAmount;
 
                             int lemonAdd = lemon.amount + lemonAmount;
@@ -219,7 +219,7 @@ namespace LemonadeStand
                         }
                         else
                         {
-
+                            sugar.amount += sugarAmount;
                             double sugarBuy = player.wallet.money -= projectedAmount;
 
                             int sugarAdd = sugar.amount + sugarAmount;
@@ -272,7 +272,7 @@ namespace LemonadeStand
                         else
                         {
 
-                            
+                            water.amount += waterAmount;
                             double waterBuy = player.wallet.money -= projectedAmount;
                             int waterAdd = water.amount + waterAmount;
                             Console.WriteLine($"You purchased {waterAmount} cup(s) of water at ${water.price} a cup.");
@@ -323,5 +323,36 @@ namespace LemonadeStand
             BuySugar(player);
             BuyWater(player);
         }
+        //public void GiveCurrentIngredientAmounts()
+        //{
+        //    GiveCurrentIceAmount();
+        //    GiveCurrentLemonAmount();
+        //    GiveCurrentSugarAmount();
+        //    GiveCurrentWaterAmount();
+        //}
+        //public int GiveCurrentLemonAmount()
+        //{
+        //    int lemonTally=lemon.amount;
+           
+        //    return lemonTally;
+
+        //}
+        //public int GiveCurrentIceAmount()
+        //{
+        //    int iceTally = ice.amount;
+        //    return iceTally;
+           
+        //}
+        //public int GiveCurrentWaterAmount()
+        //{
+        //    int waterTally = water.amount;
+        //    return waterTally;
+           
+        //}
+        //public int GiveCurrentSugarAmount()
+        //{
+        //    int sugarTally = sugar.amount;
+        //    return sugarTally;
+        //}
     }
 }
