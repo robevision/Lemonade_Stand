@@ -116,6 +116,49 @@ namespace LemonadeStand
             }
             
         }
+        public void BuyLemon()
+        {
+            PopulateProjectedPrices();
+            Console.WriteLine("Would you like to buy a lemon?");
+            string getLemonResult = Console.ReadLine().ToLower();
+            switch (getLemonResult)
+            {
+                case "yes":
+                    Console.WriteLine("How much lemons would you like?");
+                    string lemonTextAmount = Console.ReadLine().ToLower();
+                    int lemonAmount = Convert.ToInt32(lemonTextAmount);
+
+                    if (lemonAmount >= 1)
+                    {
+                        wallet = new Wallet();
+                        lemon.predictedAmount = Convert.ToInt32(lemonAmount);
+                        double projectedAmount = lemon.predictedPrice * lemon.predictedAmount;
+                        if (projectedAmount > wallet.money)
+                        {
+                            Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
+                            BuyLemon();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please type a numeric value from 1 or higher.");
+                            BuyLemon();
+                        }
+                    }
+
+                    break;
+                case "no":
+                    break;
+                default:
+                    Console.WriteLine("Please type 'yes' or 'no'");
+                    BuyLemon();
+                    break;
+            }
+            if (wallet.money >= lemon.price)
+            {
+                lemon.amount++;
+            }
+
+        }
         public void EvaluateMarketPrices()
         {
             GenerateSugarPrice();
