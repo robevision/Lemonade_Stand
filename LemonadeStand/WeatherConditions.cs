@@ -47,18 +47,18 @@ namespace LemonadeStand
         }
         public void GetActualWeather()
         {
-            int temp;
+            int actualTemperature;
             int negativeWeatherModify = random.Next(0, 2);
             int weatherModifyer = random.Next(0, 4);
             if(negativeWeatherModify == 0)
             {
-                temp = temperature - weatherModifyer;
+                actualTemperature = temperature - weatherModifyer;
             }
             else
             {
-                temp = temperature + weatherModifyer;
+                actualTemperature = temperature + weatherModifyer;
             }
-            actualWeather = temp;
+            actualWeather = actualTemperature;
         }
 
         public void CheckWeatherFavor()

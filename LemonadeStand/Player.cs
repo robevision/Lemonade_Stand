@@ -10,9 +10,10 @@ namespace LemonadeStand
         private int score;
         private int money;
         public string playerName;
-        public double cupPrice = 2.50;
+        public double cupPrice;
         public Wallet wallet;
         public Inventory inventory;
+        public int pitcherAmount;
         public Player()
         {
             wallet = new Wallet();
@@ -22,11 +23,35 @@ namespace LemonadeStand
         }
         public void PickAmountOfRecipes()
         {
-            Console.WriteLine();
+            Console.WriteLine("You have a generic mix recipe to create. This is 1 part ice, 1 part lemon, 1 part water, and 1 part sugar.");
+            Console.WriteLine("How many pitchers would you like to make?");
+            try
+            {
+                int pitcherAmount=Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Please type a number. Yes, a number. (example: 1 ).");
+                PickAmountOfRecipes();
+            }
+            if(pitcherAmount>0)
             inventory.lemonade.Add(inventory.sugar);
             inventory.lemonade.Add(inventory.lemon);
             inventory.lemonade.Add(inventory.water);
             inventory.lemonade.Add(inventory.ice);
+        }
+        public void AskForCupPrice()
+        {
+            Console.WriteLine("What price would you like to sell a cup of lemonade for?");
+            try
+            {
+                cupPrice = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Please type a number. Yes, a number. (example: 1 ).");
+                AskForCupPrice();
+            }
         }
 
 

@@ -46,12 +46,14 @@ namespace LemonadeStand
             marketPlace.DecideToShop(player);
             player.Recipe.CreateGenericRecipe(player);
             //MakePitcher();
+            player.AskForCupPrice();
             GetCustomers();
             //GetIncome();
         }
         public void DisplayDayWeather()
         {
-            Console.WriteLine(weatherConditions.actualWeather);
+            Console.WriteLine($"The actual weather is {weatherConditions.condition}, it is {weatherConditions.actualWeather}°F, with {weatherConditions.precipitationAmount} {weatherConditions.precipitation}.");
+            System.Threading.Thread.Sleep(2000);
         }
         public void DisplayAllOfTodaysCustomers()
         {
