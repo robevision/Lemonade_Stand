@@ -116,7 +116,9 @@ namespace LemonadeStand
                             
                            double iceBuy=(player.wallet.money - projectedAmount);
                             int iceAdd=ice.amount + iceAmount;
-                            
+                            Console.WriteLine($"You purchased {iceAmount} cups of ice at {ice.price} a cup.");
+                            Console.WriteLine($"You now have ${iceBuy} in your wallet.");
+
                         }
                     }
 
@@ -130,6 +132,7 @@ namespace LemonadeStand
             }
             
         }
+        //get iceBuy to subtract from actual amount in wallet
         public void BuyLemon(Player player)
         {
             Console.WriteLine($"The price of a lemon is ${lemon.price}.");
@@ -166,6 +169,8 @@ namespace LemonadeStand
 
                             double lemonBuy = (player.wallet.money - projectedAmount);
                             int lemonAdd = lemon.amount + lemonAmount;
+                            Console.WriteLine($"You purchased {lemonAmount} lemon(s) at {lemon.price} a lemon.");
+                            Console.WriteLine($"You now have ${lemonBuy} in your wallet.");
 
                         }
                     }
@@ -215,6 +220,8 @@ namespace LemonadeStand
 
                             double sugarBuy = (player.wallet.money - projectedAmount);
                             int sugarAdd = sugar.amount + sugarAmount;
+                            Console.WriteLine($"You purchased {sugarAmount} cup(s) of sugar at {sugar.price} a cup.");
+                            Console.WriteLine($"You now have ${sugarBuy} in your wallet.");
 
                         }
                     }
@@ -233,8 +240,8 @@ namespace LemonadeStand
             Console.WriteLine($"Water is ${water.price}.");
             PopulateProjectedPrices();
             Console.WriteLine("Would you like to get water?");
-            string getSugarResult = Console.ReadLine().ToLower();
-            switch (getSugarResult)
+            string getWaterResult = Console.ReadLine().ToLower();
+            switch (getWaterResult)
             {
                 case "yes":
                     Console.WriteLine("How much water would you like?");
@@ -264,7 +271,8 @@ namespace LemonadeStand
 
                             double waterBuy = (player.wallet.money - projectedAmount);
                             int waterAdd = water.amount + waterAmount;
-
+                            Console.WriteLine($"You purchased {waterAmount} cup(s) of water at {water.price} a cup.");
+                            Console.WriteLine($"You now have ${waterBuy} in your wallet.");
                         }
                     }
 
