@@ -28,7 +28,7 @@ namespace LemonadeStand
         //merge two methods for simplification
       public void GetPlayLength()
         {
-            Console.WriteLine("How many days would you like to play for?");
+            Console.WriteLine("How many days would you like to play for? Please input a week or more.");
             playLength = Console.ReadLine();
             playLengthNumber = Convert.ToInt32(playLength);
         }
@@ -83,14 +83,11 @@ namespace LemonadeStand
             Console.WriteLine($"The sky is {daysOfWeek[0].weatherConditions.condition}, it is {daysOfWeek[0].weatherConditions.temperature}°F, with {daysOfWeek[0].weatherConditions.precipitationAmount}{daysOfWeek[0].weatherConditions.precipitation}.");
         }
 
-        public void DisplayActualWeather()
-        {
-            if(MainMenu.RollDie(0,3) == 0)
-            {
-               
-            }
+        //public void DisplayActualWeather()
+        //{
+        //    Console.WriteLine(daysOfWeek[0].weatherConditions.actualWeather);
            
-        }
+        //}
         public void OpenStand()
         {
             

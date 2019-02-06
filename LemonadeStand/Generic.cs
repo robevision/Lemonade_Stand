@@ -7,5 +7,6 @@ namespace LemonadeStand
 {
     public class Generic : Recipe
     {
+
     }
 }

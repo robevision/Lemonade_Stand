@@ -42,11 +42,15 @@ namespace LemonadeStand
         }
         public void RunDay()
         {
-            //DisplayWeather();
+            DisplayDayWeather();
             //GoToMarketPlace();
             //MakeLemonade();
             GetCustomers();
             //GetIncome();
+        }
+        public void DisplayDayWeather()
+        {
+            Console.WriteLine(weatherConditions.actualWeather);
         }
         public void DisplayAllOfTodaysCustomers()
         {

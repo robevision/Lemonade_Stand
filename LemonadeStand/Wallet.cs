@@ -7,7 +7,7 @@ namespace LemonadeStand
 {
     public class Wallet
     {
-        private double money;
+        public double money;
         private double beginningBalance = 0;
         private double weeklyBalance;
         public Wallet()
