@@ -40,7 +40,7 @@ namespace LemonadeStand
                             }
                             break;
                         }
-                        else if (listOfCustomers.Count < player.inventory.pitcher) //cup
+                        if (listOfCustomers.Count < player.inventory.pitcher) //cup
                         {
                             lemonadeSales = listOfCustomers.Count;
                             player.inventory.pitcher -= listOfCustomers.Count;
@@ -70,7 +70,7 @@ namespace LemonadeStand
             //MakePitcher();
             player.AskForCupPrice();
             GetCustomers(player);
-            //GetIncome();
+            player.CheckWallet();
         }
         public void DisplayDayWeather()
         {

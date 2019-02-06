@@ -72,7 +72,6 @@ namespace LemonadeStand
     
         public void RunGame()
         {
-            MainMenu.ViewRules();
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
@@ -89,9 +88,41 @@ namespace LemonadeStand
                 
                 daysOfWeek[i].RunDay(marketPlace, player);
             }
+            playLengthNumber -= 7;
+            if(playLengthNumber< 7)
+            {
+                CheckEndGame();
+            }
+            else
+            {
+                RunGame();
+            }
            // customer.Buy(daysOfWeek[0].weatherConditions);
         }
-        
+
+        public void CheckEndGame()
+        {
+            if (player.wallet.money > 10)
+            {
+                Console.WriteLine("Congratulations! You turned a profit with your lemonade stand!");
+                Environment.Exit(0);
+            }
+            else if (player.wallet.money == 10)
+            {
+                Console.WriteLine("You didn't turn a profit, but you didn't lose any money. You came out of this endeavor as, meh.");
+                Environment.Exit(0);
+            }
+            else if (player.wallet.money < 10)
+            {
+                Console.WriteLine("You lost money on your lemonade stand business. You effectively failed.");
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("Your business did not have a permit and any profits you made were confiscated by the government and you are off to do some hard time. Tough luck.");
+                Environment.Exit(0);
+            }
+        }
         public void DisplayDailyWeather()
         {
             Console.WriteLine($"The sky is {daysOfWeek[0].weatherConditions.condition}, it is {daysOfWeek[0].weatherConditions.temperature}°F, with {daysOfWeek[0].weatherConditions.precipitationAmount}{daysOfWeek[0].weatherConditions.precipitation}.");

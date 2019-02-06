@@ -12,6 +12,8 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             Game game = new Game();
+            MainMenu.ViewRules();
+            game.RunGame();
             System.Threading.Thread.Sleep(1000);
             System.Threading.Thread.Sleep(1000);
         }
