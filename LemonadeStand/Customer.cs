@@ -80,7 +80,7 @@ namespace LemonadeStand
             {
                 if (money >= player.cupPrice)
                 {
-                    if (player.cupPrice >= recipe.recipePrice)
+                    if (player.cupPrice >= player.inventory.recipePrice)
                     {
                         int chance = MainMenu.RollDie(0, 60);
                         if (chance == 1)
@@ -93,7 +93,7 @@ namespace LemonadeStand
                         }
                       
                     }
-                    if (player.cupPrice < recipe.recipePrice)
+                    if (player.cupPrice < player.inventory.recipePrice)
                     {
                         int chance = MainMenu.RollDie(0, 1);
                         if (chance == 1)

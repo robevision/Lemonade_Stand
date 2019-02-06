@@ -16,10 +16,8 @@ namespace LemonadeStand
         {
             CreateGenericRecipe(player);
         }
-        public void SetRecipePrice(Player player)
-        {
-            recipePrice = player.inventory.sugarPrice + player.inventory.icePrice + player.inventory.lemonPrice + player.inventory.waterPrice;
-        }
+       
+               
         public void CreateGenericRecipe(Player player)
         {
             player.Inventory.pitcher++;

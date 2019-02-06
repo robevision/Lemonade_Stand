@@ -19,7 +19,8 @@ namespace LemonadeStand
         public double icePrice;
         public List<int> lemonade;
         public int pitcher;
-      //lemon amount, etc use for member variables!!
+        public double recipePrice;
+        //lemon amount, etc use for member variables!!
         //pitcher=7 cups
         //pitcher = 1 sugar, 1 lemon, 1 water, 1 ice
         //SPAWNER
@@ -30,6 +31,7 @@ namespace LemonadeStand
             sugar = 0;
             water = 0;
             pitcher = 4;
+            recipePrice = 10.50;
         }
         //CAN DO
         public void GrabIngredientsFromStore(int ice, int lemon, int sugar, int water)

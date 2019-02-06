@@ -65,7 +65,7 @@ namespace LemonadeStand
         {
             DisplayDayWeather();
             marketPlace.DecideToShop(player);
-            player.Recipe.SetRecipePrice(player);
+            player.ReviewRecipePrice();
             //MakePitcher();
             player.AskForCupPrice();
             GetCustomers(player);

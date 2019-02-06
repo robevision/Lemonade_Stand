@@ -20,7 +20,23 @@ namespace LemonadeStand
             inventory = new Inventory();
 
         }
-        public void PickAmountOfRecipes()
+        public void ReviewRecipePrice()
+        {
+            double marketPrice = inventory.recipePrice;
+            try
+            { 
+                marketPrice = inventory.sugarPrice + inventory.icePrice + inventory.lemonPrice + inventory.waterPrice;
+            }
+            catch
+            {
+              marketPrice= 10.50;
+            }
+            if(marketPrice == null)
+            {
+                marketPrice = 10.50;
+            }
+        }
+            public void PickAmountOfRecipes()
         {
             Console.WriteLine("You have a generic mix recipe to create. This is 1 part ice, 1 part lemon, 1 part water, and 1 part sugar.");
             Console.WriteLine("How many pitchers would you like to make?");
