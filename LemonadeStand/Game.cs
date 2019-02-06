@@ -54,6 +54,7 @@ namespace LemonadeStand
         }
         public void DisplayWeeklyWeather()
         {
+            Console.WriteLine("Your forecast for the week: ");
             try
             {
                 for (int i = 0; i < 7; i++)
