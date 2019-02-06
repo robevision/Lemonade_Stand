@@ -11,6 +11,10 @@ namespace LemonadeStand
         Water water;
         Sugar sugar;
         Ice ice;
+        int iceAmount;
+        int lemonAmount;
+        int waterAmount;
+        int sugarAmount;
         
         public MarketPlace()
         {
@@ -86,23 +90,33 @@ namespace LemonadeStand
             {
                 case "yes":
                     Console.WriteLine("How much ice would you like?");
-                    string iceTextAmount=Console.ReadLine().ToLower();
-                    int iceAmount=Convert.ToInt32(iceTextAmount);
-                    
+                    string iceTextAmount=Console.ReadLine();
+                    try
+                    {
+                       iceAmount = Convert.ToInt32(iceTextAmount);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Please type a numeric value from 1 or higher.");
+                        BuyIce(player);
+                    }
+
                     if (iceAmount >= 1)
                     { 
                         
-                        ice.predictedAmount = Convert.ToInt32(iceAmount);
+                        ice.predictedAmount = iceAmount;
                      double projectedAmount = ice.predictedPrice * ice.predictedAmount;
-                        if(projectedAmount > player.Wallet.money)
+                        if(projectedAmount > player.wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
                             BuyIce(player);
                         }
                         else
                         {
-                            Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuyIce(player);
+                            
+                           double iceBuy=(player.wallet.money - projectedAmount);
+                            int iceAdd=ice.amount + iceAmount;
+                            
                         }
                     }
 
@@ -114,7 +128,7 @@ namespace LemonadeStand
                     BuyIce(player);
                     break;
             }
-            if (player.Wallet.money >= ice.price)
+            if (player.wallet.money >= ice.price)
             {
                 ice.amount++;
             }
@@ -138,11 +152,12 @@ namespace LemonadeStand
                         
                         lemon.predictedAmount = Convert.ToInt32(lemonAmount);
                         double projectedAmount = lemon.predictedPrice * lemon.predictedAmount;
-                        if (projectedAmount > player.Wallet.money)
+                        if (projectedAmount > player.wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
                             BuyLemon(player);
                         }
+                       
                         else
                         {
                             Console.WriteLine("Please type a numeric value from 1 or higher.");
@@ -158,7 +173,7 @@ namespace LemonadeStand
                     BuyLemon(player);
                     break;
             }
-            if (player.Wallet.money >= lemon.price)
+            if (player.wallet.money >= lemon.price)
             {
                 lemon.amount++;
             }
@@ -182,7 +197,7 @@ namespace LemonadeStand
                        
                         sugar.predictedAmount = Convert.ToInt32(sugarAmount);
                         double projectedAmount = sugar.predictedPrice * sugar.predictedAmount;
-                        if (projectedAmount > player.Wallet.money)
+                        if (projectedAmount > player.wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
                             BuySugar(player);
@@ -202,7 +217,7 @@ namespace LemonadeStand
                     BuySugar(player);
                     break;
             }
-            if (player.Wallet.money >= sugar.price)
+            if (player.wallet.money >= sugar.price)
             {
                 sugar.amount++;
             }
@@ -226,7 +241,7 @@ namespace LemonadeStand
                        
                        water.predictedAmount = Convert.ToInt32(waterAmount);
                         double projectedAmount = water.predictedPrice * water.predictedAmount;
-                        if (projectedAmount > player.Wallet.money)
+                        if (projectedAmount > player.wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
                             BuyWater(player);
@@ -246,7 +261,7 @@ namespace LemonadeStand
                     BuyWater(player);
                     break;
             }
-            if (player.Wallet.money >= water.price)
+            if (player.wallet.money >= water.price)
             {
                 water.amount++;
             }

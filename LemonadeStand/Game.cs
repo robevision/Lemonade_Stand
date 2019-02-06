@@ -30,7 +30,20 @@ namespace LemonadeStand
         {
             Console.WriteLine("How many days would you like to play for? Please input a week or more.");
             playLength = Console.ReadLine();
-            playLengthNumber = Convert.ToInt32(playLength);
+            try
+            {
+                playLengthNumber = Convert.ToInt32(playLength);
+            }
+            catch
+            {
+                Console.WriteLine("Please enter a NUMBER of days greater or equal to a week.");
+                GetPlayLength();
+            }
+            if(playLengthNumber < 7)
+            {
+                Console.WriteLine("Please enter a value greater or equal to a week.");
+                GetPlayLength();
+            }
         }
         public void ConvertToDays()
         {
@@ -78,6 +91,7 @@ namespace LemonadeStand
             }
            // customer.Buy(daysOfWeek[0].weatherConditions);
         }
+        
         public void DisplayDailyWeather()
         {
             Console.WriteLine($"The sky is {daysOfWeek[0].weatherConditions.condition}, it is {daysOfWeek[0].weatherConditions.temperature}°F, with {daysOfWeek[0].weatherConditions.precipitationAmount}{daysOfWeek[0].weatherConditions.precipitation}.");
