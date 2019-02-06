@@ -40,10 +40,14 @@ namespace LemonadeStand
                             }
                             break;
                         }
-                        else
+                        else if (listOfCustomers.Count < player.inventory.pitcher) //cup
                         {
                             lemonadeSales = listOfCustomers.Count;
                             player.inventory.pitcher -= listOfCustomers.Count;
+                        }
+                        else
+                        {
+
                         }
                     }
                     
