@@ -75,6 +75,7 @@ namespace LemonadeStand
         }
         public void BuyIce()
         {
+            Console.WriteLine($"The price of ice is ${ice.price}.");
             PopulateProjectedPrices();
             Console.WriteLine("Would you like to buy ice?");
             string getIceResult = Console.ReadLine().ToLower();
@@ -118,13 +119,14 @@ namespace LemonadeStand
         }
         public void BuyLemon()
         {
+            Console.WriteLine($"The price of a lemon is ${lemon.price}.");
             PopulateProjectedPrices();
             Console.WriteLine("Would you like to buy a lemon?");
             string getLemonResult = Console.ReadLine().ToLower();
             switch (getLemonResult)
             {
                 case "yes":
-                    Console.WriteLine("How much lemons would you like?");
+                    Console.WriteLine("How many lemons would you like?");
                     string lemonTextAmount = Console.ReadLine().ToLower();
                     int lemonAmount = Convert.ToInt32(lemonTextAmount);
 
@@ -156,6 +158,94 @@ namespace LemonadeStand
             if (wallet.money >= lemon.price)
             {
                 lemon.amount++;
+            }
+
+        }
+        public void BuySugar()
+        {
+            Console.WriteLine($"The price of sugar is ${sugar.price}.");
+            PopulateProjectedPrices();
+            Console.WriteLine("Would you like to buy sugar?");
+            string getSugarResult = Console.ReadLine().ToLower();
+            switch (getSugarResult)
+            {
+                case "yes":
+                    Console.WriteLine("How much sugar would you like?");
+                    string sugarTextAmount = Console.ReadLine().ToLower();
+                    int sugarAmount = Convert.ToInt32(sugarTextAmount);
+
+                    if (sugarAmount >= 1)
+                    {
+                        wallet = new Wallet();
+                        sugar.predictedAmount = Convert.ToInt32(sugarAmount);
+                        double projectedAmount = sugar.predictedPrice * sugar.predictedAmount;
+                        if (projectedAmount > wallet.money)
+                        {
+                            Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
+                            BuySugar();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please type a numeric value from 1 or higher.");
+                            BuySugar();
+                        }
+                    }
+
+                    break;
+                case "no":
+                    break;
+                default:
+                    Console.WriteLine("Please type 'yes' or 'no'");
+                    BuySugar();
+                    break;
+            }
+            if (wallet.money >= sugar.price)
+            {
+                sugar.amount++;
+            }
+
+        }
+        public void BuyWater()
+        {
+            Console.WriteLine($"Water is ${water.price}.");
+            PopulateProjectedPrices();
+            Console.WriteLine("Would you like to get water?");
+            string getWaterResult = Console.ReadLine().ToLower();
+            switch (getWaterResult)
+            {
+                case "yes":
+                    Console.WriteLine("How much water would you like?");
+                    string waterTextAmount = Console.ReadLine().ToLower();
+                    int waterAmount = Convert.ToInt32(waterTextAmount);
+
+                    if (waterAmount >= 1)
+                    {
+                        wallet = new Wallet();
+                       water.predictedAmount = Convert.ToInt32(waterAmount);
+                        double projectedAmount = water.predictedPrice * water.predictedAmount;
+                        if (projectedAmount > wallet.money)
+                        {
+                            Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
+                            BuyWater();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please type a numeric value from 1 or higher.");
+                            BuyWater();
+                        }
+                    }
+
+                    break;
+                case "no":
+                    break;
+                default:
+                    Console.WriteLine("Please type 'yes' or 'no'");
+                    BuyWater();
+                    break;
+            }
+            if (wallet.money >= water.price)
+            {
+                water.amount++;
             }
 
         }
