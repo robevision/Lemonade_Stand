@@ -287,7 +287,14 @@ namespace LemonadeStand
                     BuyWater(player);
                     break;
             }
-            player.Inventory.GrabIngredientsFromStore(ice.amount, lemon.amount, sugar.amount, water.amount);
+            try
+            {
+                player.Inventory.GrabIngredientsFromStore(ice.amount, lemon.amount, sugar.amount, water.amount);
+            }
+            catch
+            {
+
+            }
         }
         public void EvaluateMarketPrices()
         {

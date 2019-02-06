@@ -35,6 +35,31 @@ namespace LemonadeStand
             this.sugar = sugar;
             this.water = water;
         }
+        public void checkForLemonade(MarketPlace marketPlace, Player player)
+        {
+            if (pitcher == 0)
+            {
+                Console.WriteLine("You do not have any lemonade made. Would you still like to continue through the day?");
+                string continueThruDayPrompt = Console.ReadLine().ToLower();
+                switch (continueThruDayPrompt)
+                {
+                    case "yes":
+                        break;
+                    case "no":
+                        marketPlace.DecideToShop(player);
+                        break;
+                    default:
+                        Console.WriteLine("Enter either 'yes' or 'no'.");
+                        checkForLemonade(marketPlace, player);
+                        break;
+                }
+            }
+            else
+            {
+                
+            }
+                    
+        }
         
         public Ingredient Items
         {

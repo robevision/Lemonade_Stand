@@ -29,7 +29,7 @@
   <Class Name="LemonadeStand.Player">
     <Position X="21.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAgAEAQAAAgEEIIAIAACAAAAAAAAAACgAAEAA=</HashCode>
+      <HashCode>AAAAAABAgAEAAAAAgEEKIAIAACIAAAACAAAACgAAkAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -42,7 +42,7 @@
   <Class Name="LemonadeStand.Recipe">
     <Position X="26.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAM=</HashCode>
+      <HashCode>AAAAAAAAIAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Recipe.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -77,7 +77,7 @@
   <Class Name="LemonadeStand.Day">
     <Position X="14.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAIIABAEAAAACAAQAAAgIAAAAAAQBAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAIIABAEAAAACAAQAAAgAAAAAAAQBAAA=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -88,7 +88,7 @@
   <Class Name="LemonadeStand.MarketPlace">
     <Position X="24" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABQgAAgBABEAQAAAAAAIAAAAAAAAAACIAAQAAAAAAQ=</HashCode>
+      <HashCode>AABQgAAhJABUAQAAAAAAAACABAAAAAICIAAQAQAAIAQ=</HashCode>
       <FileName>MarketPlace.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -102,26 +102,12 @@
   <Class Name="LemonadeStand.Inventory">
     <Position X="24.5" Y="15.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAgAAEAAEACAAAAAAAAAAAAAAAAAAAIAAQAQAAAAA=</HashCode>
+      <HashCode>AABAgAAEAAEACAAAAAAAAgAAAAAAAAAAIAAQAQAgAAA=</HashCode>
       <FileName>Inventory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Items" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="LemonadeStand.Generic">
-    <Position X="25" Y="7.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Generic.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LemonadeStand.Specialty">
-    <Position X="28.5" Y="7.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Specialty.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Precipitation">
     <Position X="2" Y="7.75" Width="1.5" />

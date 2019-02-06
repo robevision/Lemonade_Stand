@@ -77,13 +77,13 @@ namespace LemonadeStand
             string textOfMoney = Convert.ToString(money);
             amount = (textOfMoney);
         }
-        public void GetDisposition()
+        public void GetDisposition(Player player)
         {
             if (accessibility == true)
             {
-                if (money >= 5 /*player.cupPrice*/)
+                if (money >= player.cupPrice)
                 {
-                    if (/*player.cupPrice*/ 5 >= 10.50/*recipe.recipePrice*/)
+                    if (player.cupPrice >= 10.50/*recipe.recipePrice*/)
                     {
                         int chance = MainMenu.RollDie(0, 60);
                         if (chance == 1)
@@ -96,7 +96,7 @@ namespace LemonadeStand
                         }
                       
                     }
-                    if (/*player.cupPrice*/ 5 < 10.50/*recipe.recipePrice*/)
+                    if (player.cupPrice < 10.50/*recipe.recipePrice*/)
                     {
                         int chance = MainMenu.RollDie(0, 1);
                         if (chance == 1)

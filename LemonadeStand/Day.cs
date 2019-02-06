@@ -17,7 +17,7 @@ namespace LemonadeStand
             GenerateCustomerAmount(weatherConditions);
             listOfCustomers = new List<Customer>();
         }
-        public void GetCustomers()
+        public void GetCustomers(Player player)
         {
             
             for (int i = 0; i < customerAmount; i++)
@@ -26,7 +26,7 @@ namespace LemonadeStand
                 {
                    Customer customer = new Customer();
                     customer.GetAccessibility(weatherConditions);
-                    customer.GetDisposition();
+                    customer.GetDisposition(player);
                    if(customer.disposition == true)
                     {
                         customer.Buy();
@@ -44,10 +44,10 @@ namespace LemonadeStand
         {
             DisplayDayWeather();
             marketPlace.DecideToShop(player);
-            player.Recipe.CreateGenericRecipe(player);
+            //player.Recipe.CreateGenericRecipe(player);
             //MakePitcher();
             player.AskForCupPrice();
-            GetCustomers();
+            GetCustomers(player);
             //GetIncome();
         }
         public void DisplayDayWeather()
