@@ -116,6 +116,8 @@ namespace LemonadeStand
                             ice.amount += iceAmount;
                            double iceBuy= player.wallet.money -= projectedAmount;
                             int iceAdd=ice.amount + iceAmount;
+                            double iceTransfer = player.inventory.icePrice;
+                            double giveIcePrice = iceTransfer += ice.price;
                             Console.WriteLine($"You purchased {iceAmount} cups of ice at ${ice.price} a cup.");
                             Console.WriteLine($"You now have ${iceBuy} in your wallet.");
 
@@ -168,7 +170,8 @@ namespace LemonadeStand
                         {
                             lemon.amount += lemonAmount;
                             double lemonBuy = player.wallet.money -= projectedAmount;
-
+                            double lemonTransfer = player.inventory.lemonPrice;
+                            double giveLemonPrice = lemonTransfer += lemon.price;
                             int lemonAdd = lemon.amount + lemonAmount;
                             Console.WriteLine($"You purchased {lemonAmount} lemon(s) at ${lemon.price} a lemon.");
                             Console.WriteLine($"You now have ${lemonBuy} in your wallet.");
@@ -220,7 +223,8 @@ namespace LemonadeStand
                         {
                             sugar.amount += sugarAmount;
                             double sugarBuy = player.wallet.money -= projectedAmount;
-
+                            double sugarTransfer = player.inventory.sugarPrice;
+                            double giveSugarPrice = sugarTransfer += sugar.price;
                             int sugarAdd = sugar.amount + sugarAmount;
                             Console.WriteLine($"You purchased {sugarAmount} cup(s) of sugar at ${sugar.price} a cup.");
                             Console.WriteLine($"You now have ${sugarBuy} in your wallet.");
@@ -274,6 +278,8 @@ namespace LemonadeStand
                             water.amount += waterAmount;
                             double waterBuy = player.wallet.money -= projectedAmount;
                             int waterAdd = water.amount + waterAmount;
+                            double waterTransfer = player.inventory.waterPrice;
+                            double giveWaterPrice = waterTransfer += water.price;
                             Console.WriteLine($"You purchased {waterAmount} cup(s) of water at ${water.price} a cup.");
                             Console.WriteLine($"You now have ${waterBuy} in your wallet.");
                         }
@@ -296,6 +302,7 @@ namespace LemonadeStand
 
             }
         }
+       
         public void EvaluateMarketPrices()
         {
             GenerateSugarPrice();

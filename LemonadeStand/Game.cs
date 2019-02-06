@@ -23,7 +23,6 @@ namespace LemonadeStand
             daysOfWeek = new List<Day>();
             player = new Player();
             marketPlace = new MarketPlace();
-            RunGame();
         }
         //merge two methods for simplification
       public void GetPlayLength()
@@ -75,6 +74,7 @@ namespace LemonadeStand
             GetPlayLength();
             ConvertToDays();
             DisplayWeeklyWeather();
+            player.CheckWallet();
             for (int i = 0; i < 7; i++)
             {
                 daysOfWeek[i].weatherConditions.GetActualWeather();

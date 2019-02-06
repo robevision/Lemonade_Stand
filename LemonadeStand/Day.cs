@@ -63,10 +63,9 @@ namespace LemonadeStand
        
         public void RunDay(MarketPlace marketPlace, Player player)
         {
-            player.CheckWallet();
             DisplayDayWeather();
             marketPlace.DecideToShop(player);
-            //player.Recipe.CreateGenericRecipe(player);
+            player.Recipe.SetRecipePrice(player);
             //MakePitcher();
             player.AskForCupPrice();
             GetCustomers(player);

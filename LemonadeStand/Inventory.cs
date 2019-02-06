@@ -10,9 +10,13 @@ namespace LemonadeStand
     {
         int cup;
         public int sugar;
+        public double sugarPrice;
         public int lemon;
+        public double lemonPrice;
         public int water;
+        public double waterPrice;
         public int ice;
+        public double icePrice;
         public List<int> lemonade;
         public int pitcher;
       //lemon amount, etc use for member variables!!
