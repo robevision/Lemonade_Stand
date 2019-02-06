@@ -82,18 +82,25 @@ namespace LemonadeStand
             {
                 case "yes":
                     Console.WriteLine("How much ice would you like?");
-                    string iceAmount=Console.ReadLine().ToLower();
-                    do
-                    {
+                    string iceTextAmount=Console.ReadLine().ToLower();
+                    int iceAmount=Convert.ToInt32(iceTextAmount);
+                    
+                    if (iceAmount >= 1)
+                    { 
                         wallet = new Wallet();
-                     ice.predictedAmount=Convert.ToInt32(iceAmount);
+                        ice.predictedAmount = Convert.ToInt32(iceAmount);
                      double projectedAmount = ice.predictedPrice * ice.predictedAmount;
                         if(projectedAmount > wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
+                            BuyIce();
                         }
-                    
-                    } while (true);
+                        else
+                        {
+                            Console.WriteLine("Please type a numeric value from 1 or higher.");
+                            BuyIce();
+                        }
+                    }
 
                     break;
                 case "no":
