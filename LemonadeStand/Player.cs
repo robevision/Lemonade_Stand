@@ -17,7 +17,6 @@ namespace LemonadeStand
         public Player()
         {
             wallet = new Wallet();
-            CheckWallet();
             inventory = new Inventory();
 
         }

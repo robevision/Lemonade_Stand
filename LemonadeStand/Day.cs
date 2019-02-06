@@ -31,6 +31,18 @@ namespace LemonadeStand
                     {
                         customer.Buy();
                         listOfCustomers.Add(customer);
+                        if (listOfCustomers.Count == player.inventory.pitcher) //cup
+                        {
+                            for (int index = 0; index < listOfCustomers.Count; index++)
+                            {
+                             index -= player.inventory.pitcher;
+                            }
+                            break;
+                        }
+                        else
+                        {
+
+                        }
                     }
                     
                 }
@@ -40,8 +52,10 @@ namespace LemonadeStand
             DisplayAllOfTodaysCustomers();
             System.Threading.Thread.Sleep(2000);
         }
+       
         public void RunDay(MarketPlace marketPlace, Player player)
         {
+            player.CheckWallet();
             DisplayDayWeather();
             marketPlace.DecideToShop(player);
             //player.Recipe.CreateGenericRecipe(player);

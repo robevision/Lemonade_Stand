@@ -35,9 +35,6 @@ namespace LemonadeStand
             GetTemperaturePreference();
             GetName();
             GetMoneyAmount();
-            //GetAccessibility(weatherConditions);
-            //GetDisposition();
-            //DisplayCustomer();
         }
         
         public void GetTemperaturePreference()
