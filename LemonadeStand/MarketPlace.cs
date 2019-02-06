@@ -128,40 +128,45 @@ namespace LemonadeStand
                     BuyIce(player);
                     break;
             }
-            if (player.wallet.money >= ice.price)
-            {
-                ice.amount++;
-            }
             
         }
         public void BuyLemon(Player player)
         {
             Console.WriteLine($"The price of a lemon is ${lemon.price}.");
             PopulateProjectedPrices();
-            Console.WriteLine("Would you like to buy a lemon?");
+            Console.WriteLine("Would you like to buy lemon?");
             string getLemonResult = Console.ReadLine().ToLower();
             switch (getLemonResult)
             {
                 case "yes":
                     Console.WriteLine("How many lemons would you like?");
-                    string lemonTextAmount = Console.ReadLine().ToLower();
-                    int lemonAmount = Convert.ToInt32(lemonTextAmount);
+                    string lemonTextAmount = Console.ReadLine();
+                    try
+                    {
+                        lemonAmount = Convert.ToInt32(lemonTextAmount);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Please type a numeric value from 1 or higher.");
+                        BuyLemon(player);
+                    }
 
                     if (lemonAmount >= 1)
                     {
-                        
-                        lemon.predictedAmount = Convert.ToInt32(lemonAmount);
+
+                        lemon.predictedAmount = lemonAmount;
                         double projectedAmount = lemon.predictedPrice * lemon.predictedAmount;
                         if (projectedAmount > player.wallet.money)
                         {
                             Console.WriteLine("You do not have enough to buy! Please move on to another ingredient or try a different amount.");
                             BuyLemon(player);
                         }
-                       
                         else
                         {
-                            Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuyLemon(player);
+
+                            double lemonBuy = (player.wallet.money - projectedAmount);
+                            int lemonAdd = lemon.amount + lemonAmount;
+
                         }
                     }
 
@@ -173,15 +178,10 @@ namespace LemonadeStand
                     BuyLemon(player);
                     break;
             }
-            if (player.wallet.money >= lemon.price)
-            {
-                lemon.amount++;
-            }
-
         }
         public void BuySugar(Player player)
         {
-            Console.WriteLine($"The price of a cup of sugar is ${sugar.price}.");
+            Console.WriteLine($"The price of sugar is ${sugar.price}.");
             PopulateProjectedPrices();
             Console.WriteLine("Would you like to buy sugar?");
             string getSugarResult = Console.ReadLine().ToLower();
@@ -189,13 +189,21 @@ namespace LemonadeStand
             {
                 case "yes":
                     Console.WriteLine("How much sugar would you like?");
-                    string sugarTextAmount = Console.ReadLine().ToLower();
-                    int sugarAmount = Convert.ToInt32(sugarTextAmount);
+                    string sugarTextAmount = Console.ReadLine();
+                    try
+                    {
+                        sugarAmount = Convert.ToInt32(sugarTextAmount);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Please type a numeric value from 1 or higher.");
+                        BuySugar(player);
+                    }
 
                     if (sugarAmount >= 1)
                     {
-                       
-                        sugar.predictedAmount = Convert.ToInt32(sugarAmount);
+
+                        sugar.predictedAmount = sugarAmount;
                         double projectedAmount = sugar.predictedPrice * sugar.predictedAmount;
                         if (projectedAmount > player.wallet.money)
                         {
@@ -204,8 +212,10 @@ namespace LemonadeStand
                         }
                         else
                         {
-                            Console.WriteLine("Please type a numeric value from 1 or higher.");
-                            BuySugar(player);
+
+                            double sugarBuy = (player.wallet.money - projectedAmount);
+                            int sugarAdd = sugar.amount + sugarAmount;
+
                         }
                     }
 
@@ -217,11 +227,6 @@ namespace LemonadeStand
                     BuySugar(player);
                     break;
             }
-            if (player.wallet.money >= sugar.price)
-            {
-                sugar.amount++;
-            }
-
         }
         public void BuyWater(Player player)
         {
